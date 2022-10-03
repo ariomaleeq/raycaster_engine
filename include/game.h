@@ -3,6 +3,8 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "map.h"
+#include "player.h"
 
 // Represents the current state of the game
 enum GameState {
@@ -18,7 +20,7 @@ class Game
 {
 public:
     // game state
-    GameState               State;	
+    GameState               State;
     bool                    Keys[1024];
     unsigned int            Width, Height;
     // constructor/destructor
@@ -30,6 +32,11 @@ public:
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
+
+private:
+    Player player;
+    Map map;
+    Entity* playerentity;
 };
 
 #endif

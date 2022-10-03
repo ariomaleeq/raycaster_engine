@@ -140,4 +140,5 @@ CMakeFiles/map.dir/src/map.cpp.o: \
  /usr/include/c++/10/bits/stl_vector.h \
  /usr/include/c++/10/bits/stl_bvector.h \
  /usr/include/c++/10/bits/vector.tcc \
- /home/ario/cpp/raycaster_engine/include/map.h
+ /home/ario/cpp/raycaster_engine/include/map.h /usr/include/c++/10/array \
+ /usr/include/c++/10/utility /usr/include/c++/10/bits/stl_relops.h

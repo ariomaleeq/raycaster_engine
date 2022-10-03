@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named game
+# Target rules for targets named map
 
 # Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
-.PHONY : game
+map: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map
+.PHONY : map
 
 # fast build rule for target.
-game/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-.PHONY : game/fast
+map/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/map.dir/build.make CMakeFiles/map.dir/build
+.PHONY : map/fast
 
 #=============================================================================
 # Target rules for targets named player
@@ -156,17 +156,67 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named map
+# Target rules for targets named game
 
 # Build rule for target.
-map: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map
-.PHONY : map
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
+.PHONY : game
 
 # fast build rule for target.
-map/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/map.dir/build.make CMakeFiles/map.dir/build
-.PHONY : map/fast
+game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
+.PHONY : game/fast
+
+#=============================================================================
+# Target rules for targets named shader
+
+# Build rule for target.
+shader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shader
+.PHONY : shader
+
+# fast build rule for target.
+shader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shader.dir/build.make CMakeFiles/shader.dir/build
+.PHONY : shader/fast
+
+#=============================================================================
+# Target rules for targets named entity
+
+# Build rule for target.
+entity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 entity
+.PHONY : entity
+
+# fast build rule for target.
+entity/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/build
+.PHONY : entity/fast
+
+src/entity.o: src/entity.cpp.o
+.PHONY : src/entity.o
+
+# target to build an object file
+src/entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/src/entity.cpp.o
+.PHONY : src/entity.cpp.o
+
+src/entity.i: src/entity.cpp.i
+.PHONY : src/entity.i
+
+# target to preprocess a source file
+src/entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/src/entity.cpp.i
+.PHONY : src/entity.cpp.i
+
+src/entity.s: src/entity.cpp.s
+.PHONY : src/entity.s
+
+# target to generate assembly for a file
+src/entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/src/entity.cpp.s
+.PHONY : src/entity.cpp.s
 
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
@@ -288,6 +338,30 @@ src/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/player.dir/build.make CMakeFiles/player.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
+src/shader.o: src/shader.cpp.o
+.PHONY : src/shader.o
+
+# target to build an object file
+src/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shader.dir/build.make CMakeFiles/shader.dir/src/shader.cpp.o
+.PHONY : src/shader.cpp.o
+
+src/shader.i: src/shader.cpp.i
+.PHONY : src/shader.i
+
+# target to preprocess a source file
+src/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shader.dir/build.make CMakeFiles/shader.dir/src/shader.cpp.i
+.PHONY : src/shader.cpp.i
+
+src/shader.s: src/shader.cpp.s
+.PHONY : src/shader.s
+
+# target to generate assembly for a file
+src/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shader.dir/build.make CMakeFiles/shader.dir/src/shader.cpp.s
+.PHONY : src/shader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,10 +370,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... entity"
 	@echo "... game"
 	@echo "... main"
 	@echo "... map"
 	@echo "... player"
+	@echo "... shader"
+	@echo "... src/entity.o"
+	@echo "... src/entity.i"
+	@echo "... src/entity.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -315,6 +394,9 @@ help:
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/shader.o"
+	@echo "... src/shader.i"
+	@echo "... src/shader.s"
 .PHONY : help
 
 

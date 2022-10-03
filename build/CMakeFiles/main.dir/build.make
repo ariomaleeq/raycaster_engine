@@ -110,16 +110,22 @@ main: CMakeFiles/main.dir/src/glad.c.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/lib/x86_64-linux-gnu/libGL.so
 main: /usr/local/lib/libglfw3.a
+main: libmap.a
+main: libplayer.a
+main: libgame.a
+main: /usr/lib/x86_64-linux-gnu/libGL.so
+main: /usr/local/lib/libglfw3.a
+main: /usr/lib/x86_64-linux-gnu/librt.so
+main: /usr/lib/x86_64-linux-gnu/libm.so
+main: /usr/lib/x86_64-linux-gnu/libX11.so
 main: /usr/include/X11/Xlib.h
 main: /usr/lib/x86_64-linux-gnu/libdl.so
 main: /usr/include/pthread.h
 main: /usr/include/glad/glad.h
 main: libmap.a
 main: libplayer.a
-main: libgame.a
-main: /usr/lib/x86_64-linux-gnu/librt.so
-main: /usr/lib/x86_64-linux-gnu/libm.so
-main: /usr/lib/x86_64-linux-gnu/libX11.so
+main: libentity.a
+main: libshader.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

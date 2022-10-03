@@ -1,15 +1,22 @@
+#ifndef MAP_H
+#define MAP_H
+
 #include <iostream>
 #include <vector>
+#include <array>
 
 
 class Map {
 
     public:
         Map();
-        void getMap();
-        void setMap();
+        void getMap(); //copies the map to an array
+        void setMap();// function to set the map from a file
+        friend class Entity; //allows entities to get access to the map in the game
 
     private:
 
-            float map[60]; // map of the game
+        std::array<int,100> map; // map of the game
 };
+
+#endif

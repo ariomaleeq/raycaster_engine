@@ -50,8 +50,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/game.dir/DependInfo.cmake"
+  "CMakeFiles/map.dir/DependInfo.cmake"
   "CMakeFiles/player.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
-  "CMakeFiles/map.dir/DependInfo.cmake"
+  "CMakeFiles/game.dir/DependInfo.cmake"
+  "CMakeFiles/shader.dir/DependInfo.cmake"
+  "CMakeFiles/entity.dir/DependInfo.cmake"
   )

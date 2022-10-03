@@ -1,17 +1,16 @@
+#ifndef PLAYER_H
+#define PLAYER_H
 #include <iostream>
 #include <vector>
+#include <array>
+#include "entity.h"
 
 
-class Player{
+class Player: public Entity{
 
     public:
 
-        Player();
-        void getPlayerState();
-        void movePlayer();
-        ~Player();
-    private:
+        Player(); //unique constructor to the player object 
+ };
 
-        float state[4]; // state of the player: postion and angle
-
-};
+#endif

@@ -97,8 +97,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:UNINITIALIZED=1
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -209,6 +209,9 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//export compile_commands.json
+DCMAKE_EXPORT_COMPILE_COMMANDS:STRING=
+
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
@@ -236,8 +239,14 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
+//Dependencies for the target
+game_LIB_DEPENDS:STATIC=general;OpenGL::GL;general;glfw;general;GL;general;X11;general;dl;general;pthread;general;glad;general;map;general;player;general;shader;
+
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/local/lib/cmake/glfw3
+
+//Dependencies for the target
+player_LIB_DEPENDS:STATIC=general;entity;
 
 //Value Computed by CMake
 raycaster_engine_BINARY_DIR:STATIC=/home/ario/cpp/raycaster_engine/build
