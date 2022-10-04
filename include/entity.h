@@ -16,6 +16,7 @@ class Entity{
         virtual void moveEntityLeft();
         virtual void rotateEntityClockwise();
         virtual void rotateEntityCounterClockwise();
+        virtual void printEntityState();
     protected:
         std::array<float,3> state;//entity state: x,y,theta
         std::string name; //entity name in the game

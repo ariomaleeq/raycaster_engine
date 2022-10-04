@@ -23,6 +23,7 @@ add_library(player src/player.cpp ${PLAYER_HEADER})
 add_library(game src/game.cpp ${GAME_HEADER})
 add_library(shader src/shader.cpp ${SHADER_HEADER})
 add_library(entity src/entity.cpp ${ENTITY_HEADER})
+add_library(color include/colorsettings.h)
 
 add_library(X11 SHARED IMPORTED)
 set_property(TARGET X11 PROPERTY IMPORTED_LOCATION "/usr/include/X11/Xlib.h")
@@ -36,11 +37,13 @@ set_property(TARGET pthread PROPERTY IMPORTED_LOCATION "/usr/include/pthread.h")
 add_library(glad SHARED IMPORTED)
 set_property(TARGET glad PROPERTY IMPORTED_LOCATION "/usr/include/glad/glad.h")
 
-target_link_libraries(player entity)
+target_link_libraries(player entity color shader)
 
-target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player game shader)
+target_link_libraries(map entity player color shader)
 
-target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game)
+target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player game shader color)
+
+target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader colorl)
 
 set(DCMAKE_EXPORT_COMPILE_COMMANDS 1 )
 set(DCMAKE_EXPORT_COMPILE_COMMANDS "${CMAKE_EXPORT_COMPILE_COMMANDS}" CACHE STRING "export compile_commands.json")
