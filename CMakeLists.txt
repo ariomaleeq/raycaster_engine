@@ -9,10 +9,11 @@ find_package(OpenGL REQUIRED)
 include_directories($(OPENGL_INCUDE_DIRS))
 
 find_package(glfw3 3.3 REQUIRED)
+find_package(Boost REQUIRED COMPONENTS system)
 
 include_directories(
     include
-    $(GLFW_INCLUDE_DIRS))
+    $(GLFW_INCLUDE_DIRS) $(Boost INCLUDE_DIRS))
 set(ENTITY_HEADER include/entity.h)
 set(MAP_HEADER include/map.h)
 set(PLAYER_HEADER include/player.h)
@@ -23,7 +24,8 @@ add_library(player src/player.cpp ${PLAYER_HEADER})
 add_library(game src/game.cpp ${GAME_HEADER})
 add_library(shader src/shader.cpp ${SHADER_HEADER})
 add_library(entity src/entity.cpp ${ENTITY_HEADER})
-add_library(color include/colorsettings.h)
+add_library(color src/colorsettings.cpp include/colorsettings.h)
+
 
 add_library(X11 SHARED IMPORTED)
 set_property(TARGET X11 PROPERTY IMPORTED_LOCATION "/usr/include/X11/Xlib.h")
@@ -41,9 +43,9 @@ target_link_libraries(player entity color shader)
 
 target_link_libraries(map entity player color shader)
 
-target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player game shader color)
+target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color)
 
-target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader colorl)
+target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader color ${Boost_LIBRARIES})
 
 set(DCMAKE_EXPORT_COMPILE_COMMANDS 1 )
 set(DCMAKE_EXPORT_COMPILE_COMMANDS "${CMAKE_EXPORT_COMPILE_COMMANDS}" CACHE STRING "export compile_commands.json")

@@ -19,6 +19,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/Compiler/GNU-C.cmake"
   "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake"
   "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/Compiler/GNU.cmake"
+  "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/FindBoost.cmake"
   "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/FindOpenGL.cmake"
   "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/ario/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.21/Modules/FindPackageMessage.cmake"
@@ -54,6 +55,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/player.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/game.dir/DependInfo.cmake"
+  "CMakeFiles/color.dir/DependInfo.cmake"
   "CMakeFiles/shader.dir/DependInfo.cmake"
   "CMakeFiles/entity.dir/DependInfo.cmake"
   )

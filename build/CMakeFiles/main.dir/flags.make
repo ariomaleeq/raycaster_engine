@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)
+C_INCLUDES = -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I"/home/ario/cpp/raycaster_engine/\$$" -I"/home/ario/cpp/raycaster_engine/(" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I"/home/ario/cpp/raycaster_engine/)"
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)
+CXX_INCLUDES = -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I"/home/ario/cpp/raycaster_engine/\$$" -I"/home/ario/cpp/raycaster_engine/(" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I"/home/ario/cpp/raycaster_engine/)"
 
 CXX_FLAGS = 
 

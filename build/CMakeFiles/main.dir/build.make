@@ -113,6 +113,9 @@ main: /usr/local/lib/libglfw3.a
 main: libmap.a
 main: libplayer.a
 main: libgame.a
+main: libshader.a
+main: libcolor.a
+main: /usr/lib/x86_64-linux-gnu/libboost_system.so
 main: /usr/lib/x86_64-linux-gnu/libGL.so
 main: /usr/local/lib/libglfw3.a
 main: /usr/lib/x86_64-linux-gnu/librt.so
@@ -126,6 +129,7 @@ main: libmap.a
 main: libplayer.a
 main: libentity.a
 main: libshader.a
+main: libcolor.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

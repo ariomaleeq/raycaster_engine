@@ -32,7 +32,8 @@ public:
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
-    Entity* playerreference();//pass a pointer of the player to the main function
+    Entity* playerReference();//pass a pointer of the player to the main function
+    Map* mapreference();      //pass a pointer of the map to the main function
 
 private:
     Player player;

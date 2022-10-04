@@ -169,6 +169,19 @@ game/fast:
 .PHONY : game/fast
 
 #=============================================================================
+# Target rules for targets named color
+
+# Build rule for target.
+color: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color
+.PHONY : color
+
+# fast build rule for target.
+color/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
+.PHONY : color/fast
+
+#=============================================================================
 # Target rules for targets named shader
 
 # Build rule for target.
@@ -193,6 +206,30 @@ entity: cmake_check_build_system
 entity/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/build
 .PHONY : entity/fast
+
+src/colorsettings.o: src/colorsettings.cpp.o
+.PHONY : src/colorsettings.o
+
+# target to build an object file
+src/colorsettings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/src/colorsettings.cpp.o
+.PHONY : src/colorsettings.cpp.o
+
+src/colorsettings.i: src/colorsettings.cpp.i
+.PHONY : src/colorsettings.i
+
+# target to preprocess a source file
+src/colorsettings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/src/colorsettings.cpp.i
+.PHONY : src/colorsettings.cpp.i
+
+src/colorsettings.s: src/colorsettings.cpp.s
+.PHONY : src/colorsettings.s
+
+# target to generate assembly for a file
+src/colorsettings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/src/colorsettings.cpp.s
+.PHONY : src/colorsettings.cpp.s
 
 src/entity.o: src/entity.cpp.o
 .PHONY : src/entity.o
@@ -370,12 +407,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... color"
 	@echo "... entity"
 	@echo "... game"
 	@echo "... main"
 	@echo "... map"
 	@echo "... player"
 	@echo "... shader"
+	@echo "... src/colorsettings.o"
+	@echo "... src/colorsettings.i"
+	@echo "... src/colorsettings.s"
 	@echo "... src/entity.o"
 	@echo "... src/entity.i"
 	@echo "... src/entity.s"

@@ -24,7 +24,7 @@ void Game::Render(){
 //classes
 
 }
-Entity* Game::playerreference(){
+Entity* Game::playerReference(){
 Entity* playerentity = &player;
 return playerentity;
 }

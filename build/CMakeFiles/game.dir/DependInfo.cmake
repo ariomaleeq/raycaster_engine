@@ -16,6 +16,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/map.dir/DependInfo.cmake"
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/player.dir/DependInfo.cmake"
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/shader.dir/DependInfo.cmake"
+  "/home/ario/cpp/raycaster_engine/build/CMakeFiles/color.dir/DependInfo.cmake"
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/entity.dir/DependInfo.cmake"
   )
 

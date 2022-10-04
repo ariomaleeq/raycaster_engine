@@ -32,11 +32,11 @@ void Entity::moveEntityLeft(){
 }
 
 void Entity::rotateEntityClockwise(){
-    this->state[2] = (this->state[2]) - 0.01;
+    this->state[2] = (this->state[2]) - 1;
     this->printEntityState();
 }
 void Entity::rotateEntityCounterClockwise(){
-    this->state[2] = (this->state[2]) + 0.01;
+    this->state[2] = (this->state[2]) + 1;
     this->printEntityState();
 }
 void Entity::printEntityState(){

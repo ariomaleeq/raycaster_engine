@@ -1,37 +1,42 @@
 [
 {
   "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/map.dir/src/map.cpp.o -c /home/ario/cpp/raycaster_engine/src/map.cpp",
-  "file": "/home/ario/cpp/raycaster_engine/src/map.cpp"
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/color.dir/src/colorsettings.cpp.o -c /home/ario/cpp/raycaster_engine/src/colorsettings.cpp",
+  "file": "/home/ario/cpp/raycaster_engine/src/colorsettings.cpp"
 },
 {
   "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/entity.dir/src/entity.cpp.o -c /home/ario/cpp/raycaster_engine/src/entity.cpp",
-  "file": "/home/ario/cpp/raycaster_engine/src/entity.cpp"
-},
-{
-  "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/player.dir/src/player.cpp.o -c /home/ario/cpp/raycaster_engine/src/player.cpp",
-  "file": "/home/ario/cpp/raycaster_engine/src/player.cpp"
-},
-{
-  "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/shader.dir/src/shader.cpp.o -c /home/ario/cpp/raycaster_engine/src/shader.cpp",
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/shader.dir/src/shader.cpp.o -c /home/ario/cpp/raycaster_engine/src/shader.cpp",
   "file": "/home/ario/cpp/raycaster_engine/src/shader.cpp"
 },
 {
   "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/game.dir/src/game.cpp.o -c /home/ario/cpp/raycaster_engine/src/game.cpp",
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/entity.dir/src/entity.cpp.o -c /home/ario/cpp/raycaster_engine/src/entity.cpp",
+  "file": "/home/ario/cpp/raycaster_engine/src/entity.cpp"
+},
+{
+  "directory": "/home/ario/cpp/raycaster_engine/build",
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/player.dir/src/player.cpp.o -c /home/ario/cpp/raycaster_engine/src/player.cpp",
+  "file": "/home/ario/cpp/raycaster_engine/src/player.cpp"
+},
+{
+  "directory": "/home/ario/cpp/raycaster_engine/build",
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/map.dir/src/map.cpp.o -c /home/ario/cpp/raycaster_engine/src/map.cpp",
+  "file": "/home/ario/cpp/raycaster_engine/src/map.cpp"
+},
+{
+  "directory": "/home/ario/cpp/raycaster_engine/build",
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/game.dir/src/game.cpp.o -c /home/ario/cpp/raycaster_engine/src/game.cpp",
   "file": "/home/ario/cpp/raycaster_engine/src/game.cpp"
 },
 {
   "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/main.dir/src/main.cpp.o -c /home/ario/cpp/raycaster_engine/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/main.dir/src/main.cpp.o -c /home/ario/cpp/raycaster_engine/src/main.cpp",
   "file": "/home/ario/cpp/raycaster_engine/src/main.cpp"
 },
 {
   "directory": "/home/ario/cpp/raycaster_engine/build",
-  "command": "/usr/bin/cc  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS)  -o CMakeFiles/main.dir/src/glad.c.o -c /home/ario/cpp/raycaster_engine/src/glad.c",
+  "command": "/usr/bin/cc  -I/home/ario/cpp/raycaster_engine/$(OPENGL_INCUDE_DIRS) -I/home/ario/cpp/raycaster_engine/include -I/home/ario/cpp/raycaster_engine/$(GLFW_INCLUDE_DIRS) -I\"/home/ario/cpp/raycaster_engine/\\$$\" -I\"/home/ario/cpp/raycaster_engine/(\" -I/home/ario/cpp/raycaster_engine/Boost -I/home/ario/cpp/raycaster_engine/INCLUDE_DIRS -I\"/home/ario/cpp/raycaster_engine/)\"  -o CMakeFiles/main.dir/src/glad.c.o -c /home/ario/cpp/raycaster_engine/src/glad.c",
   "file": "/home/ario/cpp/raycaster_engine/src/glad.c"
 }
 ]

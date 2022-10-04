@@ -1,16 +1,20 @@
 #include<glad/glad.h>
 #include <GLFW/glfw3.h>
-
+#include "colorsettings.h"
 #include "game.h"
+#include <functional>
+#include <boost/bind.hpp>
 #define WINDOW_WIDTH 1600
 #define WINDOW_HEIGHT 800
-
+int previous_mousex;
+int mousexchange;
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window, Entity* playerentity);
+void mouse_callback(GLFWwindow* window, double xpos, double ypose);
 int main()
 {
     Game raycaster(WINDOW_WIDTH, WINDOW_HEIGHT);
-
+    ColorSettings color; 
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -29,13 +33,14 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
+    glfwSetCursorPosCallback(window, mouse_callback);
     raycaster.Init();
     float deltaTime = 0.0f;
     float lastFrame = 0.0f;
 
     while(!glfwWindowShouldClose(window))
     {
-        processInput(window, raycaster.playerreference());
+        processInput(window, raycaster.playerReference());
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
@@ -44,12 +49,18 @@ int main()
         raycaster.Update(deltaTime);
         raycaster.Render();
         // glClearColor(0.75f, 0.82f, 0.8f, 1.0f);
-        glClearColor(0.3764,0.23137,0.2156,1.0);
+        glClearColor(color.lighterblue[0], color.lighterblue[1], color.lighterblue[2], color.lighterblue[3]);
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
     }
     glfwTerminate();
     return 0;
+}
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    int mousex = xpos;
+    mousexchange = mousex - previous_mousex;
+    previous_mousex = mousex;
 }
 void processInput(GLFWwindow* window, Entity* playerentity)
 {
@@ -73,6 +84,14 @@ void processInput(GLFWwindow* window, Entity* playerentity)
     if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     {
         playerentity->moveEntityRight();
+    }
+    if(mousexchange<0){
+        playerentity->rotateEntityCounterClockwise();
+        mousexchange = 0;
+    }
+    if(mousexchange>0){
+        playerentity->rotateEntityClockwise();
+        mousexchange = 0;
     }
 }
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)

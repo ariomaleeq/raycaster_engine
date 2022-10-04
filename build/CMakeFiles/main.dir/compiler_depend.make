@@ -84,6 +84,7 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/local/include/GLFW/glfw3.h \
   /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h \
+  ../include/colorsettings.h \
   ../include/game.h \
   ../include/map.h \
   /usr/include/c++/10/iostream \
@@ -248,8 +249,143 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10/utility \
   /usr/include/c++/10/bits/stl_relops.h \
   ../include/player.h \
-  ../include/entity.h
+  ../include/entity.h \
+  /usr/include/c++/10/functional \
+  /usr/include/c++/10/tuple \
+  /usr/include/c++/10/bits/uses_allocator.h \
+  /usr/include/c++/10/bits/invoke.h \
+  /usr/include/c++/10/bits/refwrap.h \
+  /usr/include/c++/10/bits/std_function.h \
+  /usr/include/boost/bind.hpp \
+  /usr/include/boost/bind/bind.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/c++/10/cstddef \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/ref.hpp \
+  /usr/include/boost/core/ref.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/mem_fn.hpp \
+  /usr/include/boost/bind/mem_fn.hpp \
+  /usr/include/boost/get_pointer.hpp \
+  /usr/include/boost/config/no_tr1/memory.hpp \
+  /usr/include/c++/10/memory \
+  /usr/include/c++/10/bits/stl_tempbuf.h \
+  /usr/include/c++/10/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/10/bits/ranges_uninitialized.h \
+  /usr/include/c++/10/ext/concurrence.h \
+  /usr/include/c++/10/bits/unique_ptr.h \
+  /usr/include/c++/10/bits/shared_ptr.h \
+  /usr/include/c++/10/bits/shared_ptr_base.h \
+  /usr/include/c++/10/bits/allocated_ptr.h \
+  /usr/include/c++/10/ext/aligned_buffer.h \
+  /usr/include/c++/10/bits/shared_ptr_atomic.h \
+  /usr/include/c++/10/bits/atomic_base.h \
+  /usr/include/c++/10/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/10/backward/auto_ptr.h \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/bind/mem_fn_template.hpp \
+  /usr/include/boost/bind/mem_fn_cc.hpp \
+  /usr/include/boost/type.hpp \
+  /usr/include/boost/is_placeholder.hpp \
+  /usr/include/boost/bind/arg.hpp \
+  /usr/include/boost/visit_each.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/core/is_same.hpp \
+  /usr/include/boost/bind/storage.hpp \
+  /usr/include/boost/bind/bind_cc.hpp \
+  /usr/include/boost/bind/bind_mf_cc.hpp \
+  /usr/include/boost/bind/bind_mf2_cc.hpp \
+  /usr/include/boost/bind/placeholders.hpp
 
+
+/usr/include/boost/bind/placeholders.hpp:
+
+/usr/include/boost/bind/bind_mf_cc.hpp:
+
+/usr/include/boost/core/enable_if.hpp:
+
+/usr/include/boost/visit_each.hpp:
+
+/usr/include/boost/is_placeholder.hpp:
+
+/usr/include/boost/bind/mem_fn_cc.hpp:
+
+/usr/include/boost/detail/workaround.hpp:
+
+/usr/include/c++/10/ext/aligned_buffer.h:
+
+/usr/include/c++/10/bits/shared_ptr_base.h:
+
+/usr/include/c++/10/bits/unique_ptr.h:
+
+/usr/include/c++/10/bits/ranges_uninitialized.h:
+
+/usr/include/c++/10/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/10/bits/stl_tempbuf.h:
+
+/usr/include/boost/core/is_same.hpp:
+
+/usr/include/boost/bind/mem_fn.hpp:
+
+/usr/include/boost/mem_fn.hpp:
+
+/usr/include/boost/core/addressof.hpp:
+
+/usr/include/boost/config/workaround.hpp:
+
+/usr/include/boost/core/ref.hpp:
+
+/usr/include/boost/config/detail/posix_features.hpp:
+
+/usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/boost/config/detail/select_platform_config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/boost/config/no_tr1/memory.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
+
+/usr/include/boost/config/detail/select_stdlib_config.hpp:
+
+/usr/include/boost/config/compiler/gcc.hpp:
+
+/usr/include/boost/config/user.hpp:
+
+/usr/include/boost/config.hpp:
+
+/usr/include/boost/bind/bind.hpp:
+
+/usr/include/c++/10/bits/refwrap.h:
+
+/usr/include/c++/10/bits/invoke.h:
+
+/usr/include/c++/10/functional:
 
 ../include/entity.h:
 
@@ -281,6 +417,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/bits/streambuf.tcc:
 
+/usr/include/c++/10/streambuf:
+
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -291,6 +429,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
 
+/usr/include/c++/10/bits/shared_ptr.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/10/cwchar:
@@ -299,11 +439,17 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/dlfcn.h:
 
+/usr/include/c++/10/cstddef:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/c++/10/exception:
 
+/usr/include/c++/10/tuple:
+
 /usr/include/glad/glad.h:
+
+/usr/include/c++/10/backward/auto_ptr.h:
 
 ../include/map.h:
 
@@ -327,19 +473,29 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+/usr/include/boost/type.hpp:
+
+../include/colorsettings.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/libio.h:
 
+/usr/include/boost/bind/arg.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/usr/include/c++/10/bits/allocated_ptr.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h:
 
 /usr/include/c++/10/stdexcept:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/c++/10/ext/alloc_traits.h:
 
@@ -351,6 +507,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/iosfwd:
 
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
@@ -360,6 +518,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/10/bits/exception_ptr.h:
 
 ../include/game.h:
+
+/usr/include/c++/10/bits/atomic_lockfree_defines.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h:
 
@@ -381,13 +541,13 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/c++/10/streambuf:
-
 /usr/include/x86_64-linux-gnu/bits/dlfcn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/boost/bind.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -411,13 +571,19 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
+/usr/include/boost/bind/bind_cc.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/c++/10/bits/uses_allocator.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
 
 /usr/include/c++/10/ios:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/boost/bind/bind_mf2_cc.hpp:
 
 /usr/include/c++/10/bits/ostream.tcc:
 
@@ -467,6 +633,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/bits/exception.h:
 
+/usr/include/boost/bind/storage.hpp:
+
 /usr/include/c++/10/bits/exception_defines.h:
 
 /usr/include/c++/10/bits/cxxabi_forced.h:
@@ -474,6 +642,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/10/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/10/typeinfo:
+
+/usr/include/c++/10/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/10/vector:
 
@@ -497,15 +667,23 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/bits/stl_algobase.h:
 
+/usr/include/boost/config/detail/suffix.hpp:
+
 /usr/include/c++/10/bits/functexcept.h:
 
 /usr/include/c++/10/string:
 
 /usr/include/c++/10/bits/cpp_type_traits.h:
 
+/usr/include/boost/ref.hpp:
+
 /usr/include/c++/10/ext/type_traits.h:
 
 /usr/include/c++/10/ext/new_allocator.h:
+
+/usr/include/c++/10/bits/atomic_base.h:
+
+/usr/include/c++/10/ext/concurrence.h:
 
 /usr/include/c++/10/bits/stl_pair.h:
 
@@ -559,11 +737,17 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/gthr.h:
 
+/usr/include/c++/10/memory:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/gthr-default.h:
+
+/usr/include/boost/bind/mem_fn_template.hpp:
 
 /usr/include/pthread.h:
 
 /usr/include/errno.h:
+
+/usr/include/c++/10/bits/std_function.h:
 
 /usr/include/c++/10/bits/stl_vector.h:
 
@@ -602,6 +786,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/c++/10/bits/iterator_concepts.h:
+
+/usr/include/boost/get_pointer.hpp:
 
 /usr/include/c++/10/bits/stl_uninitialized.h:
 
