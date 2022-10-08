@@ -40,20 +40,22 @@ int main()
     float deltaTime = 0.0f;
     float lastFrame = 0.0f;
 
+        int i = 0;
     while(!glfwWindowShouldClose(window))
     {
         processInput(window, raycaster.playerReference());
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-
+        glClearColor(color.lightblue[0], color.lightblue[1], color.lightblue[2], color.lightblue[3]);
+        glClear(GL_COLOR_BUFFER_BIT);
         glfwPollEvents();
         raycaster.Update(deltaTime);
         raycaster.Render();
         // glClearColor(0.75f, 0.82f, 0.8f, 1.0f);
-        glClearColor(color.lightblue[0], color.lightblue[1], color.lightblue[2], color.lightblue[3]);
-        glClear(GL_COLOR_BUFFER_BIT);
+         
         glfwSwapBuffers(window);
+        i++;
     }
     glfwTerminate();
     return 0;
