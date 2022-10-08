@@ -145,5 +145,29 @@ CMakeFiles/game.dir/src/game.cpp.o: \
  /usr/include/c++/10/bits/stl_bvector.h \
  /usr/include/c++/10/bits/vector.tcc /usr/include/c++/10/array \
  /usr/include/c++/10/utility /usr/include/c++/10/bits/stl_relops.h \
+ /home/ario/cpp/raycaster_engine/include/maprenderer.h \
+ /home/ario/cpp/raycaster_engine/include/renderer.h \
+ /home/ario/cpp/raycaster_engine/include/shader.h \
+ /usr/include/c++/10/fstream /usr/include/c++/10/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+ /usr/include/c++/10/bits/fstream.tcc /usr/include/c++/10/sstream \
+ /usr/include/c++/10/bits/sstream.tcc \
+ /home/ario/cpp/raycaster_engine/include/colorsettings.h \
  /home/ario/cpp/raycaster_engine/include/player.h \
- /home/ario/cpp/raycaster_engine/include/entity.h
+ /home/ario/cpp/raycaster_engine/include/entity.h \
+ /usr/include/c++/10/memory /usr/include/c++/10/bits/stl_tempbuf.h \
+ /usr/include/c++/10/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/10/bits/ranges_uninitialized.h \
+ /usr/include/c++/10/ext/concurrence.h \
+ /usr/include/c++/10/bits/uses_allocator.h \
+ /usr/include/c++/10/bits/unique_ptr.h /usr/include/c++/10/tuple \
+ /usr/include/c++/10/bits/invoke.h /usr/include/c++/10/bits/shared_ptr.h \
+ /usr/include/c++/10/bits/shared_ptr_base.h \
+ /usr/include/c++/10/bits/allocated_ptr.h \
+ /usr/include/c++/10/bits/refwrap.h \
+ /usr/include/c++/10/ext/aligned_buffer.h \
+ /usr/include/c++/10/bits/shared_ptr_atomic.h \
+ /usr/include/c++/10/bits/atomic_base.h \
+ /usr/include/c++/10/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/10/backward/auto_ptr.h

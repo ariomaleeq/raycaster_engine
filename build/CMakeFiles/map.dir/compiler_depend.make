@@ -179,8 +179,41 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
   ../include/map.h \
   /usr/include/c++/10/array \
   /usr/include/c++/10/utility \
-  /usr/include/c++/10/bits/stl_relops.h
+  /usr/include/c++/10/bits/stl_relops.h \
+  ../include/maprenderer.h \
+  ../include/renderer.h \
+  ../include/shader.h \
+  /usr/include/glad/glad.h \
+  /usr/include/KHR/khrplatform.h \
+  /usr/include/c++/10/fstream \
+  /usr/include/c++/10/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+  /usr/include/c++/10/bits/fstream.tcc \
+  /usr/include/c++/10/sstream \
+  /usr/include/c++/10/bits/sstream.tcc \
+  ../include/colorsettings.h
 
+
+../include/colorsettings.h:
+
+/usr/include/c++/10/sstream:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h:
+
+/usr/include/c++/10/bits/codecvt.h:
+
+/usr/include/c++/10/fstream:
+
+/usr/include/KHR/khrplatform.h:
+
+/usr/include/glad/glad.h:
+
+../include/renderer.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
+
+../include/maprenderer.h:
 
 /usr/include/c++/10/bits/stl_relops.h:
 
@@ -199,6 +232,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 /usr/include/endian.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
+
+../include/shader.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
 
@@ -257,6 +292,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 /usr/include/c++/10/cctype:
 
 /usr/include/c++/10/bits/exception_defines.h:
+
+/usr/include/c++/10/bits/sstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -327,6 +364,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/c++/10/bits/fstream.tcc:
 
 /usr/include/c++/10/bits/char_traits.h:
 

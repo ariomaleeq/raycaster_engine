@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmaprenderer.a CMakeFiles/maprenderer.dir/src/maprenderer.cpp.o
+/usr/bin/ranlib libmaprenderer.a

@@ -248,6 +248,16 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10/array \
   /usr/include/c++/10/utility \
   /usr/include/c++/10/bits/stl_relops.h \
+  ../include/maprenderer.h \
+  ../include/renderer.h \
+  ../include/shader.h \
+  /usr/include/c++/10/fstream \
+  /usr/include/c++/10/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+  /usr/include/c++/10/bits/fstream.tcc \
+  /usr/include/c++/10/sstream \
+  /usr/include/c++/10/bits/sstream.tcc \
   ../include/player.h \
   ../include/entity.h \
   /usr/include/c++/10/functional \
@@ -339,10 +349,6 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/bits/stl_tempbuf.h:
 
-/usr/include/boost/core/is_same.hpp:
-
-/usr/include/boost/bind/mem_fn.hpp:
-
 /usr/include/boost/mem_fn.hpp:
 
 /usr/include/boost/core/addressof.hpp:
@@ -391,6 +397,22 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../include/player.h:
 
+/usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h:
+
+/usr/include/c++/10/bits/codecvt.h:
+
+/usr/include/boost/core/is_same.hpp:
+
+/usr/include/boost/bind/mem_fn.hpp:
+
+/usr/include/c++/10/fstream:
+
+../include/renderer.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
+
+../include/maprenderer.h:
+
 /usr/include/c++/10/bits/stl_relops.h:
 
 /usr/include/c++/10/utility:
@@ -404,6 +426,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/10/bits/locale_facets.tcc:
 
 /usr/include/c++/10/bits/streambuf_iterator.h:
+
+../include/shader.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
 
@@ -421,6 +445,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
+/usr/include/c++/10/bits/sstream.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/10/array:
@@ -436,6 +462,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/10/cwchar:
 
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/c++/10/sstream:
 
 /usr/include/dlfcn.h:
 
@@ -658,6 +686,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/string.h:
 
 /usr/include/c++/10/type_traits:
+
+/usr/include/c++/10/bits/fstream.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdarg.h:
 

@@ -51,6 +51,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/rayrenderer.dir/DependInfo.cmake"
+  "CMakeFiles/maprenderer.dir/DependInfo.cmake"
+  "CMakeFiles/renderer.dir/DependInfo.cmake"
+  "CMakeFiles/ray.dir/DependInfo.cmake"
   "CMakeFiles/map.dir/DependInfo.cmake"
   "CMakeFiles/player.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"

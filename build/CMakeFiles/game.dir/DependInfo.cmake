@@ -18,6 +18,8 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/shader.dir/DependInfo.cmake"
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/color.dir/DependInfo.cmake"
   "/home/ario/cpp/raycaster_engine/build/CMakeFiles/entity.dir/DependInfo.cmake"
+  "/home/ario/cpp/raycaster_engine/build/CMakeFiles/maprenderer.dir/DependInfo.cmake"
+  "/home/ario/cpp/raycaster_engine/build/CMakeFiles/renderer.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

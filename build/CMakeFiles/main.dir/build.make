@@ -126,6 +126,8 @@ main: /usr/lib/x86_64-linux-gnu/libdl.so
 main: /usr/include/pthread.h
 main: /usr/include/glad/glad.h
 main: libmap.a
+main: libmaprenderer.a
+main: librenderer.a
 main: libplayer.a
 main: libentity.a
 main: libshader.a

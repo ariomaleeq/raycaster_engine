@@ -1,7 +1,8 @@
 //this is the library for the color of the game, can be implemented as a
 //singleton in the future
+#pragma once
 class ColorSettings{
-public:
+    public:
     ColorSettings();
     float darkgreen[4] = {0.129412, 0.231373, 0.145098, 1.0};
     float green[4] = {0.227451, 0.376471,  0.290196, 1.0};

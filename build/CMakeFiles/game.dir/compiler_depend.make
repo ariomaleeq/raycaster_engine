@@ -184,13 +184,74 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
   /usr/include/c++/10/array \
   /usr/include/c++/10/utility \
   /usr/include/c++/10/bits/stl_relops.h \
+  ../include/maprenderer.h \
+  ../include/renderer.h \
+  ../include/shader.h \
+  /usr/include/c++/10/fstream \
+  /usr/include/c++/10/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+  /usr/include/c++/10/bits/fstream.tcc \
+  /usr/include/c++/10/sstream \
+  /usr/include/c++/10/bits/sstream.tcc \
+  ../include/colorsettings.h \
   ../include/player.h \
-  ../include/entity.h
+  ../include/entity.h \
+  /usr/include/c++/10/memory \
+  /usr/include/c++/10/bits/stl_tempbuf.h \
+  /usr/include/c++/10/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/10/bits/ranges_uninitialized.h \
+  /usr/include/c++/10/ext/concurrence.h \
+  /usr/include/c++/10/bits/uses_allocator.h \
+  /usr/include/c++/10/bits/unique_ptr.h \
+  /usr/include/c++/10/tuple \
+  /usr/include/c++/10/bits/invoke.h \
+  /usr/include/c++/10/bits/shared_ptr.h \
+  /usr/include/c++/10/bits/shared_ptr_base.h \
+  /usr/include/c++/10/bits/allocated_ptr.h \
+  /usr/include/c++/10/bits/refwrap.h \
+  /usr/include/c++/10/ext/aligned_buffer.h \
+  /usr/include/c++/10/bits/shared_ptr_atomic.h \
+  /usr/include/c++/10/bits/atomic_base.h \
+  /usr/include/c++/10/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/10/backward/auto_ptr.h
 
+
+/usr/include/c++/10/ext/aligned_buffer.h:
+
+/usr/include/c++/10/bits/refwrap.h:
+
+/usr/include/c++/10/bits/shared_ptr_base.h:
+
+/usr/include/c++/10/bits/invoke.h:
+
+/usr/include/c++/10/bits/unique_ptr.h:
+
+/usr/include/c++/10/bits/ranges_uninitialized.h:
+
+/usr/include/c++/10/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/10/bits/stl_tempbuf.h:
 
 ../include/entity.h:
 
 ../include/player.h:
+
+../include/colorsettings.h:
+
+/usr/include/c++/10/sstream:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h:
+
+/usr/include/c++/10/bits/codecvt.h:
+
+/usr/include/c++/10/fstream:
+
+../include/renderer.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
+
+../include/maprenderer.h:
 
 /usr/include/c++/10/bits/stl_relops.h:
 
@@ -206,6 +267,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/c++/10/bits/streambuf_iterator.h:
 
+../include/shader.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
@@ -218,9 +281,15 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/c++/10/bits/stl_iterator.h:
 
+/usr/include/c++/10/bits/atomic_base.h:
+
+/usr/include/c++/10/ext/concurrence.h:
+
 /usr/include/c++/10/bits/stl_pair.h:
 
 /usr/include/c++/10/bits/localefwd.h:
+
+/usr/include/c++/10/tuple:
 
 /usr/include/glad/glad.h:
 
@@ -288,6 +357,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/stdc-predef.h:
 
+/usr/include/c++/10/bits/fstream.tcc:
+
 /usr/include/c++/10/bits/char_traits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdarg.h:
@@ -297,6 +368,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/c++/10/debug/assertions.h:
+
+/usr/include/c++/10/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/10/vector:
 
@@ -314,6 +387,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 ../include/game.h:
 
+/usr/include/c++/10/bits/atomic_lockfree_defines.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h:
 
 /usr/include/c++/10/bits/basic_string.tcc:
@@ -328,9 +403,13 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
+/usr/include/c++/10/backward/auto_ptr.h:
+
 /usr/include/c++/10/bits/concept_check.h:
 
 ../include/map.h:
+
+/usr/include/c++/10/bits/shared_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -358,9 +437,13 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
 
+/usr/include/c++/10/bits/allocated_ptr.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h:
 
 /usr/include/c++/10/stdexcept:
+
+/usr/include/c++/10/bits/sstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -371,6 +454,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/include/c++/10/bits/postypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/c++/10/bits/uses_allocator.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
 
@@ -419,6 +504,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/local/include/GLFW/glfw3.h:
 
 /usr/include/linux/errno.h:
+
+/usr/include/c++/10/memory:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/gthr-default.h:
 

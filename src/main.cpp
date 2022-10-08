@@ -6,8 +6,10 @@
 #include <boost/bind.hpp>
 #define WINDOW_WIDTH 1600
 #define WINDOW_HEIGHT 800
+//global variables that tracks mouse movement
 int previous_mousex;
 int mousexchange;
+//functions for callbacks: framebuffer, mouse position, input processing
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window, Entity* playerentity);
 void mouse_callback(GLFWwindow* window, double xpos, double ypose);
@@ -49,7 +51,7 @@ int main()
         raycaster.Update(deltaTime);
         raycaster.Render();
         // glClearColor(0.75f, 0.82f, 0.8f, 1.0f);
-        glClearColor(color.lighterblue[0], color.lighterblue[1], color.lighterblue[2], color.lighterblue[3]);
+        glClearColor(color.lightblue[0], color.lightblue[1], color.lightblue[2], color.lightblue[3]);
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
     }

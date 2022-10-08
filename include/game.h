@@ -21,7 +21,6 @@ class Game
 public:
     // game state
     GameState               State;
-    bool                    Keys[1024];
     unsigned int            Width, Height;
     // constructor/destructor
     Game(unsigned int width, unsigned int height);
@@ -33,12 +32,11 @@ public:
     void Update(float dt);
     void Render();
     Entity* playerReference();//pass a pointer of the player to the main function
-    Map* mapreference();      //pass a pointer of the map to the main function
+    Map* mapReference();      //pass a pointer of the map to the main function
 
 private:
     Player player;
     Map map;
-    Entity* playerentity;
-};
+    };
 
 #endif

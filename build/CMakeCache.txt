@@ -264,7 +264,10 @@ game_LIB_DEPENDS:STATIC=general;OpenGL::GL;general;glfw;general;GL;general;X11;g
 glfw3_DIR:PATH=/usr/local/lib/cmake/glfw3
 
 //Dependencies for the target
-map_LIB_DEPENDS:STATIC=general;entity;general;player;general;color;general;shader;
+map_LIB_DEPENDS:STATIC=general;entity;general;player;general;color;general;shader;general;maprenderer;
+
+//Dependencies for the target
+maprenderer_LIB_DEPENDS:STATIC=general;renderer;
 
 //Dependencies for the target
 player_LIB_DEPENDS:STATIC=general;entity;general;color;general;shader;

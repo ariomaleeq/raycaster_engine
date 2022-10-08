@@ -117,6 +117,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rayrenderer
+
+# Build rule for target.
+rayrenderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rayrenderer
+.PHONY : rayrenderer
+
+# fast build rule for target.
+rayrenderer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/build
+.PHONY : rayrenderer/fast
+
+#=============================================================================
+# Target rules for targets named maprenderer
+
+# Build rule for target.
+maprenderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 maprenderer
+.PHONY : maprenderer
+
+# fast build rule for target.
+maprenderer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maprenderer.dir/build.make CMakeFiles/maprenderer.dir/build
+.PHONY : maprenderer/fast
+
+#=============================================================================
+# Target rules for targets named renderer
+
+# Build rule for target.
+renderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 renderer
+.PHONY : renderer
+
+# fast build rule for target.
+renderer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/build
+.PHONY : renderer/fast
+
+#=============================================================================
+# Target rules for targets named ray
+
+# Build rule for target.
+ray: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray
+.PHONY : ray
+
+# fast build rule for target.
+ray/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/build
+.PHONY : ray/fast
+
+#=============================================================================
 # Target rules for targets named map
 
 # Build rule for target.
@@ -351,6 +403,30 @@ src/map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map.dir/build.make CMakeFiles/map.dir/src/map.cpp.s
 .PHONY : src/map.cpp.s
 
+src/maprenderer.o: src/maprenderer.cpp.o
+.PHONY : src/maprenderer.o
+
+# target to build an object file
+src/maprenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maprenderer.dir/build.make CMakeFiles/maprenderer.dir/src/maprenderer.cpp.o
+.PHONY : src/maprenderer.cpp.o
+
+src/maprenderer.i: src/maprenderer.cpp.i
+.PHONY : src/maprenderer.i
+
+# target to preprocess a source file
+src/maprenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maprenderer.dir/build.make CMakeFiles/maprenderer.dir/src/maprenderer.cpp.i
+.PHONY : src/maprenderer.cpp.i
+
+src/maprenderer.s: src/maprenderer.cpp.s
+.PHONY : src/maprenderer.s
+
+# target to generate assembly for a file
+src/maprenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maprenderer.dir/build.make CMakeFiles/maprenderer.dir/src/maprenderer.cpp.s
+.PHONY : src/maprenderer.cpp.s
+
 src/player.o: src/player.cpp.o
 .PHONY : src/player.o
 
@@ -374,6 +450,78 @@ src/player.s: src/player.cpp.s
 src/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/player.dir/build.make CMakeFiles/player.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
+
+src/ray.o: src/ray.cpp.o
+.PHONY : src/ray.o
+
+# target to build an object file
+src/ray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/src/ray.cpp.o
+.PHONY : src/ray.cpp.o
+
+src/ray.i: src/ray.cpp.i
+.PHONY : src/ray.i
+
+# target to preprocess a source file
+src/ray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/src/ray.cpp.i
+.PHONY : src/ray.cpp.i
+
+src/ray.s: src/ray.cpp.s
+.PHONY : src/ray.s
+
+# target to generate assembly for a file
+src/ray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/src/ray.cpp.s
+.PHONY : src/ray.cpp.s
+
+src/rayrenderer.o: src/rayrenderer.cpp.o
+.PHONY : src/rayrenderer.o
+
+# target to build an object file
+src/rayrenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/src/rayrenderer.cpp.o
+.PHONY : src/rayrenderer.cpp.o
+
+src/rayrenderer.i: src/rayrenderer.cpp.i
+.PHONY : src/rayrenderer.i
+
+# target to preprocess a source file
+src/rayrenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/src/rayrenderer.cpp.i
+.PHONY : src/rayrenderer.cpp.i
+
+src/rayrenderer.s: src/rayrenderer.cpp.s
+.PHONY : src/rayrenderer.s
+
+# target to generate assembly for a file
+src/rayrenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/src/rayrenderer.cpp.s
+.PHONY : src/rayrenderer.cpp.s
+
+src/renderer.o: src/renderer.cpp.o
+.PHONY : src/renderer.o
+
+# target to build an object file
+src/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/renderer.cpp.o
+.PHONY : src/renderer.cpp.o
+
+src/renderer.i: src/renderer.cpp.i
+.PHONY : src/renderer.i
+
+# target to preprocess a source file
+src/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/renderer.cpp.i
+.PHONY : src/renderer.cpp.i
+
+src/renderer.s: src/renderer.cpp.s
+.PHONY : src/renderer.s
+
+# target to generate assembly for a file
+src/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/renderer.cpp.s
+.PHONY : src/renderer.cpp.s
 
 src/shader.o: src/shader.cpp.o
 .PHONY : src/shader.o
@@ -412,7 +560,11 @@ help:
 	@echo "... game"
 	@echo "... main"
 	@echo "... map"
+	@echo "... maprenderer"
 	@echo "... player"
+	@echo "... ray"
+	@echo "... rayrenderer"
+	@echo "... renderer"
 	@echo "... shader"
 	@echo "... src/colorsettings.o"
 	@echo "... src/colorsettings.i"
@@ -432,9 +584,21 @@ help:
 	@echo "... src/map.o"
 	@echo "... src/map.i"
 	@echo "... src/map.s"
+	@echo "... src/maprenderer.o"
+	@echo "... src/maprenderer.i"
+	@echo "... src/maprenderer.s"
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/ray.o"
+	@echo "... src/ray.i"
+	@echo "... src/ray.s"
+	@echo "... src/rayrenderer.o"
+	@echo "... src/rayrenderer.i"
+	@echo "... src/rayrenderer.s"
+	@echo "... src/renderer.o"
+	@echo "... src/renderer.i"
+	@echo "... src/renderer.s"
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"

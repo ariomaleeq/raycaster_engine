@@ -1,4 +1,8 @@
 /home/ario/cpp/raycaster_engine/build/CMakeFiles/rebuild_cache.dir
+/home/ario/cpp/raycaster_engine/build/CMakeFiles/rayrenderer.dir
+/home/ario/cpp/raycaster_engine/build/CMakeFiles/maprenderer.dir
+/home/ario/cpp/raycaster_engine/build/CMakeFiles/renderer.dir
+/home/ario/cpp/raycaster_engine/build/CMakeFiles/ray.dir
 /home/ario/cpp/raycaster_engine/build/CMakeFiles/map.dir
 /home/ario/cpp/raycaster_engine/build/CMakeFiles/edit_cache.dir
 /home/ario/cpp/raycaster_engine/build/CMakeFiles/player.dir
