@@ -270,7 +270,10 @@ map_LIB_DEPENDS:STATIC=general;entity;general;player;general;color;general;shade
 maprenderer_LIB_DEPENDS:STATIC=general;renderer;
 
 //Dependencies for the target
-player_LIB_DEPENDS:STATIC=general;entity;general;color;general;shader;
+player_LIB_DEPENDS:STATIC=general;entity;general;color;general;shader;general;playerrenderer;
+
+//Dependencies for the target
+playerrenderer_LIB_DEPENDS:STATIC=general;renderer;
 
 //Value Computed by CMake
 raycaster_engine_BINARY_DIR:STATIC=/home/ario/cpp/raycaster_engine/build

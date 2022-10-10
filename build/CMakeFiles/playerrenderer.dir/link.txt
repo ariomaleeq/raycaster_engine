@@ -1,0 +1,2 @@
+/usr/bin/ar qc libplayerrenderer.a CMakeFiles/playerrenderer.dir/src/playerrenderer.cpp.o
+/usr/bin/ranlib libplayerrenderer.a

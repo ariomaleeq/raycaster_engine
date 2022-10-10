@@ -35,6 +35,7 @@ add_library(color src/colorsettings.cpp ${COLOR_HEADER})
 add_library(ray src/ray.cpp ${RAY_HEADER})
 add_library(renderer src/renderer.cpp ${RENDERER_HEADER})
 add_library(maprenderer src/maprenderer.cpp ${MAP_RENDERER_HEADER})
+add_library(playerrenderer src/playerrenderer.cpp include/playerrenderer.h)
 add_library(rayrenderer src/rayrenderer.cpp ${RAY_RENDERER_HEADER})
 
 
@@ -50,9 +51,12 @@ set_property(TARGET pthread PROPERTY IMPORTED_LOCATION "/usr/include/pthread.h")
 
 add_library(glad SHARED IMPORTED)
 set_property(TARGET glad PROPERTY IMPORTED_LOCATION "/usr/include/glad/glad.h")
+
+target_link_libraries(playerrenderer renderer)
+
 target_link_libraries(maprenderer renderer)
 
-target_link_libraries(player entity color shader)
+target_link_libraries(player entity color shader playerrenderer)
 
 target_link_libraries(map entity player color shader maprenderer)
 

@@ -194,9 +194,21 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
   /usr/include/c++/10/bits/fstream.tcc \
   /usr/include/c++/10/sstream \
   /usr/include/c++/10/bits/sstream.tcc \
+  /usr/include/c++/10/math.h \
+  /usr/include/c++/10/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   ../include/colorsettings.h \
   ../include/player.h \
   ../include/entity.h \
+  ../include/playerrenderer.h \
   /usr/include/c++/10/memory \
   /usr/include/c++/10/bits/stl_tempbuf.h \
   /usr/include/c++/10/bits/stl_raw_storage_iter.h \
@@ -229,15 +241,27 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/c++/10/bits/ranges_uninitialized.h:
 
-/usr/include/c++/10/bits/stl_raw_storage_iter.h:
-
 /usr/include/c++/10/bits/stl_tempbuf.h:
+
+../include/playerrenderer.h:
 
 ../include/entity.h:
 
 ../include/player.h:
 
 ../include/colorsettings.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/c++/10/bits/stl_raw_storage_iter.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/10/math.h:
 
 /usr/include/c++/10/sstream:
 
@@ -405,6 +429,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/c++/10/backward/auto_ptr.h:
 
+/usr/include/c++/10/cmath:
+
 /usr/include/c++/10/bits/concept_check.h:
 
 ../include/map.h:
@@ -434,6 +460,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/include/c++/10/array:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
 
@@ -491,6 +519,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
@@ -515,6 +545,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/stdlib.h:
@@ -530,6 +562,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 ../src/game.cpp:
 
@@ -606,6 +640,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/include/features.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 

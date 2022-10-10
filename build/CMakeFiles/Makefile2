@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/ario/cpp/raycaster_engine/build
 
 # The main recursive "all" target.
 all: CMakeFiles/rayrenderer.dir/all
+all: CMakeFiles/playerrenderer.dir/all
 all: CMakeFiles/maprenderer.dir/all
 all: CMakeFiles/renderer.dir/all
 all: CMakeFiles/ray.dir/all
@@ -82,6 +83,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/rayrenderer.dir/clean
+clean: CMakeFiles/playerrenderer.dir/clean
 clean: CMakeFiles/maprenderer.dir/clean
 clean: CMakeFiles/renderer.dir/clean
 clean: CMakeFiles/ray.dir/clean
@@ -101,7 +103,7 @@ clean: CMakeFiles/entity.dir/clean
 CMakeFiles/rayrenderer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=18,19 "Built target rayrenderer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=20,21 "Built target rayrenderer"
 .PHONY : CMakeFiles/rayrenderer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -119,6 +121,32 @@ rayrenderer: CMakeFiles/rayrenderer.dir/rule
 CMakeFiles/rayrenderer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayrenderer.dir/build.make CMakeFiles/rayrenderer.dir/clean
 .PHONY : CMakeFiles/rayrenderer.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/playerrenderer.dir
+
+# All Build rule for target.
+CMakeFiles/playerrenderer.dir/all: CMakeFiles/renderer.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=16,17 "Built target playerrenderer"
+.PHONY : CMakeFiles/playerrenderer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/playerrenderer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/playerrenderer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 0
+.PHONY : CMakeFiles/playerrenderer.dir/rule
+
+# Convenience name for target.
+playerrenderer: CMakeFiles/playerrenderer.dir/rule
+.PHONY : playerrenderer
+
+# clean rule for target.
+CMakeFiles/playerrenderer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/clean
+.PHONY : CMakeFiles/playerrenderer.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/maprenderer.dir
@@ -153,7 +181,7 @@ CMakeFiles/maprenderer.dir/clean:
 CMakeFiles/renderer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=20,21 "Built target renderer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=22,23 "Built target renderer"
 .PHONY : CMakeFiles/renderer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -179,7 +207,7 @@ CMakeFiles/renderer.dir/clean:
 CMakeFiles/ray.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ray.dir/build.make CMakeFiles/ray.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=16,17 "Built target ray"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=18,19 "Built target ray"
 .PHONY : CMakeFiles/ray.dir/all
 
 # Build rule for subdir invocation for target.
@@ -202,12 +230,13 @@ CMakeFiles/ray.dir/clean:
 # Target rules for target CMakeFiles/map.dir
 
 # All Build rule for target.
+CMakeFiles/map.dir/all: CMakeFiles/color.dir/all
+CMakeFiles/map.dir/all: CMakeFiles/shader.dir/all
 CMakeFiles/map.dir/all: CMakeFiles/entity.dir/all
+CMakeFiles/map.dir/all: CMakeFiles/playerrenderer.dir/all
 CMakeFiles/map.dir/all: CMakeFiles/maprenderer.dir/all
 CMakeFiles/map.dir/all: CMakeFiles/renderer.dir/all
 CMakeFiles/map.dir/all: CMakeFiles/player.dir/all
-CMakeFiles/map.dir/all: CMakeFiles/color.dir/all
-CMakeFiles/map.dir/all: CMakeFiles/shader.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map.dir/build.make CMakeFiles/map.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/map.dir/build.make CMakeFiles/map.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=10,11 "Built target map"
@@ -215,7 +244,7 @@ CMakeFiles/map.dir/all: CMakeFiles/shader.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/map.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/map.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/map.dir/rule
@@ -233,9 +262,11 @@ CMakeFiles/map.dir/clean:
 # Target rules for target CMakeFiles/player.dir
 
 # All Build rule for target.
-CMakeFiles/player.dir/all: CMakeFiles/entity.dir/all
 CMakeFiles/player.dir/all: CMakeFiles/color.dir/all
 CMakeFiles/player.dir/all: CMakeFiles/shader.dir/all
+CMakeFiles/player.dir/all: CMakeFiles/entity.dir/all
+CMakeFiles/player.dir/all: CMakeFiles/playerrenderer.dir/all
+CMakeFiles/player.dir/all: CMakeFiles/renderer.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/player.dir/build.make CMakeFiles/player.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/player.dir/build.make CMakeFiles/player.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=14,15 "Built target player"
@@ -243,7 +274,7 @@ CMakeFiles/player.dir/all: CMakeFiles/shader.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/player.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/player.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/player.dir/rule
@@ -261,14 +292,15 @@ CMakeFiles/player.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/entity.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/maprenderer.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/renderer.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/map.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/game.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/color.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/shader.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/entity.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/playerrenderer.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/maprenderer.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/renderer.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/map.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=7,8,9 "Built target main"
@@ -276,7 +308,7 @@ CMakeFiles/main.dir/all: CMakeFiles/shader.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -294,13 +326,14 @@ CMakeFiles/main.dir/clean:
 # Target rules for target CMakeFiles/game.dir
 
 # All Build rule for target.
-CMakeFiles/game.dir/all: CMakeFiles/entity.dir/all
-CMakeFiles/game.dir/all: CMakeFiles/maprenderer.dir/all
-CMakeFiles/game.dir/all: CMakeFiles/renderer.dir/all
-CMakeFiles/game.dir/all: CMakeFiles/player.dir/all
-CMakeFiles/game.dir/all: CMakeFiles/map.dir/all
 CMakeFiles/game.dir/all: CMakeFiles/color.dir/all
 CMakeFiles/game.dir/all: CMakeFiles/shader.dir/all
+CMakeFiles/game.dir/all: CMakeFiles/entity.dir/all
+CMakeFiles/game.dir/all: CMakeFiles/playerrenderer.dir/all
+CMakeFiles/game.dir/all: CMakeFiles/maprenderer.dir/all
+CMakeFiles/game.dir/all: CMakeFiles/renderer.dir/all
+CMakeFiles/game.dir/all: CMakeFiles/map.dir/all
+CMakeFiles/game.dir/all: CMakeFiles/player.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=5,6 "Built target game"
@@ -308,7 +341,7 @@ CMakeFiles/game.dir/all: CMakeFiles/shader.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp/raycaster_engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/game.dir/rule
@@ -355,7 +388,7 @@ CMakeFiles/color.dir/clean:
 CMakeFiles/shader.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shader.dir/build.make CMakeFiles/shader.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shader.dir/build.make CMakeFiles/shader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=22,23 "Built target shader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/cpp/raycaster_engine/build/CMakeFiles --progress-num=24,25 "Built target shader"
 .PHONY : CMakeFiles/shader.dir/all
 
 # Build rule for subdir invocation for target.

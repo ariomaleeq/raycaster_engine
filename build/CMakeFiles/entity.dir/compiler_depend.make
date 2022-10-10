@@ -174,8 +174,62 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
   ../include/entity.h \
   /usr/include/c++/10/array \
   /usr/include/c++/10/utility \
-  /usr/include/c++/10/bits/stl_relops.h
+  /usr/include/c++/10/bits/stl_relops.h \
+  ../include/playerrenderer.h \
+  ../include/renderer.h \
+  ../include/shader.h \
+  /usr/include/glad/glad.h \
+  /usr/include/KHR/khrplatform.h \
+  /usr/include/c++/10/fstream \
+  /usr/include/c++/10/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+  /usr/include/c++/10/bits/fstream.tcc \
+  /usr/include/c++/10/sstream \
+  /usr/include/c++/10/bits/sstream.tcc \
+  /usr/include/c++/10/math.h \
+  /usr/include/c++/10/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  ../include/colorsettings.h
 
+
+../include/colorsettings.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/10/math.h:
+
+/usr/include/c++/10/sstream:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h:
+
+/usr/include/c++/10/bits/codecvt.h:
+
+/usr/include/c++/10/fstream:
+
+/usr/include/KHR/khrplatform.h:
+
+/usr/include/glad/glad.h:
+
+../include/renderer.h:
+
+../include/playerrenderer.h:
 
 /usr/include/c++/10/bits/stl_relops.h:
 
@@ -193,9 +247,13 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
 
+../include/shader.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
 
 /usr/include/c++/10/bits/localefwd.h:
+
+/usr/include/c++/10/cmath:
 
 /usr/include/c++/10/bits/concept_check.h:
 
@@ -242,6 +300,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 /usr/include/c++/10/cctype:
 
 /usr/include/c++/10/bits/exception_defines.h:
+
+/usr/include/c++/10/bits/sstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -313,6 +373,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
 
 /usr/include/c++/10/bits/stl_iterator_base_funcs.h:
@@ -322,6 +384,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/c++/10/bits/fstream.tcc:
 
 /usr/include/c++/10/bits/char_traits.h:
 
@@ -373,6 +437,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
@@ -397,6 +463,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/stdlib.h:
@@ -410,6 +478,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
@@ -482,6 +552,8 @@ CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp \
 /usr/include/features.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 

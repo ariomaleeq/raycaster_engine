@@ -127,9 +127,10 @@ main: /usr/include/pthread.h
 main: /usr/include/glad/glad.h
 main: libmap.a
 main: libmaprenderer.a
-main: librenderer.a
 main: libplayer.a
 main: libentity.a
+main: libplayerrenderer.a
+main: librenderer.a
 main: libshader.a
 main: libcolor.a
 main: CMakeFiles/main.dir/link.txt

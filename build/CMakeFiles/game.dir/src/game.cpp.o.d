@@ -152,10 +152,20 @@ CMakeFiles/game.dir/src/game.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
  /usr/include/c++/10/bits/fstream.tcc /usr/include/c++/10/sstream \
- /usr/include/c++/10/bits/sstream.tcc \
+ /usr/include/c++/10/bits/sstream.tcc /usr/include/c++/10/math.h \
+ /usr/include/c++/10/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /home/ario/cpp/raycaster_engine/include/colorsettings.h \
  /home/ario/cpp/raycaster_engine/include/player.h \
  /home/ario/cpp/raycaster_engine/include/entity.h \
+ /home/ario/cpp/raycaster_engine/include/playerrenderer.h \
  /usr/include/c++/10/memory /usr/include/c++/10/bits/stl_tempbuf.h \
  /usr/include/c++/10/bits/stl_raw_storage_iter.h \
  /usr/include/c++/10/bits/ranges_uninitialized.h \

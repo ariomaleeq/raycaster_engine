@@ -192,10 +192,31 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
   /usr/include/c++/10/bits/fstream.tcc \
   /usr/include/c++/10/sstream \
   /usr/include/c++/10/bits/sstream.tcc \
+  /usr/include/c++/10/math.h \
+  /usr/include/c++/10/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   ../include/colorsettings.h
 
 
 ../include/colorsettings.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/10/math.h:
 
 /usr/include/c++/10/sstream:
 
@@ -238,6 +259,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
 
 /usr/include/c++/10/bits/localefwd.h:
+
+/usr/include/c++/10/cmath:
 
 ../include/map.h:
 
@@ -351,6 +374,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h:
@@ -421,6 +446,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
@@ -445,6 +472,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/stdlib.h:
@@ -460,6 +489,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
@@ -536,6 +567,8 @@ CMakeFiles/map.dir/src/map.cpp.o: ../src/map.cpp \
 /usr/include/features.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 

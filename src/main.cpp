@@ -21,7 +21,7 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+    glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
 
     GLFWwindow* window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Raycaster", nullptr, nullptr);
     glfwMakeContextCurrent(window);
@@ -34,8 +34,10 @@ int main()
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetCursorPosCallback(window, mouse_callback);
+
     raycaster.Init();
     float deltaTime = 0.0f;
     float lastFrame = 0.0f;
@@ -47,7 +49,7 @@ int main()
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-        glClearColor(color.lightblue[0], color.lightblue[1], color.lightblue[2], color.lightblue[3]);
+        glClearColor(color.sand[0], color.sand[1], color.sand[2], color.sand[3]);
         glClear(GL_COLOR_BUFFER_BIT);
         glfwPollEvents();
         raycaster.Update(deltaTime);

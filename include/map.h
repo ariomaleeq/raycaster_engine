@@ -17,6 +17,7 @@ class Map {
         void renderMap();// renders the map on the screen
         friend class Entity; //allows entities to get access to the map in the game
         friend class MapRenderer; //allows the map renderer to get access to the map in the game
+        friend class Ray; //allows the ray to get access to the map in the game
 
     private:
 

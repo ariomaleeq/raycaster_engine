@@ -1,3 +1,6 @@
+#ifndef RENDERER_H
+#define RENDERER_H
+
 #include "shader.h"
 #include "colorsettings.h"
 #include <array>
@@ -15,3 +18,4 @@ class Renderer{
 
     unsigned int quadVAO;
 };
+#endif

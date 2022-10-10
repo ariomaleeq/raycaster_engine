@@ -258,8 +258,20 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10/bits/fstream.tcc \
   /usr/include/c++/10/sstream \
   /usr/include/c++/10/bits/sstream.tcc \
+  /usr/include/c++/10/math.h \
+  /usr/include/c++/10/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   ../include/player.h \
   ../include/entity.h \
+  ../include/playerrenderer.h \
   /usr/include/c++/10/functional \
   /usr/include/c++/10/tuple \
   /usr/include/c++/10/bits/uses_allocator.h \
@@ -345,8 +357,6 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/bits/ranges_uninitialized.h:
 
-/usr/include/c++/10/bits/stl_raw_storage_iter.h:
-
 /usr/include/c++/10/bits/stl_tempbuf.h:
 
 /usr/include/boost/mem_fn.hpp:
@@ -358,8 +368,6 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/boost/core/ref.hpp:
 
 /usr/include/boost/config/detail/posix_features.hpp:
-
-/usr/include/boost/config/platform/linux.hpp:
 
 /usr/include/boost/config/detail/select_platform_config.hpp:
 
@@ -393,9 +401,25 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/functional:
 
+../include/playerrenderer.h:
+
 ../include/entity.h:
 
 ../include/player.h:
+
+/usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/c++/10/bits/stl_raw_storage_iter.h:
+
+/usr/include/math.h:
+
+/usr/include/c++/10/math.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h:
 
@@ -453,6 +477,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
 
 /usr/include/c++/10/bits/shared_ptr.h:
@@ -479,6 +505,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/backward/auto_ptr.h:
 
+/usr/include/c++/10/cmath:
+
 ../include/map.h:
 
 /usr/include/c++/10/bits/concept_check.h:
@@ -494,6 +522,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/alloca.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
@@ -514,6 +544,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/boost/bind/arg.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -596,6 +628,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/10/bits/stl_iterator_base_funcs.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -786,6 +820,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/c++/10/concepts:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 

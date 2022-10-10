@@ -24,6 +24,8 @@ void Game::Render(){
 //will render the player and the map using the methods from the respective
 //classes
 this->map.renderMap();
+Entity* player = &(this->player);
+player->renderEntity();
 
 }
 Entity* Game::playerReference(){

@@ -130,6 +130,19 @@ rayrenderer/fast:
 .PHONY : rayrenderer/fast
 
 #=============================================================================
+# Target rules for targets named playerrenderer
+
+# Build rule for target.
+playerrenderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 playerrenderer
+.PHONY : playerrenderer
+
+# fast build rule for target.
+playerrenderer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/build
+.PHONY : playerrenderer/fast
+
+#=============================================================================
 # Target rules for targets named maprenderer
 
 # Build rule for target.
@@ -451,6 +464,30 @@ src/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/player.dir/build.make CMakeFiles/player.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
+src/playerrenderer.o: src/playerrenderer.cpp.o
+.PHONY : src/playerrenderer.o
+
+# target to build an object file
+src/playerrenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/src/playerrenderer.cpp.o
+.PHONY : src/playerrenderer.cpp.o
+
+src/playerrenderer.i: src/playerrenderer.cpp.i
+.PHONY : src/playerrenderer.i
+
+# target to preprocess a source file
+src/playerrenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/src/playerrenderer.cpp.i
+.PHONY : src/playerrenderer.cpp.i
+
+src/playerrenderer.s: src/playerrenderer.cpp.s
+.PHONY : src/playerrenderer.s
+
+# target to generate assembly for a file
+src/playerrenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playerrenderer.dir/build.make CMakeFiles/playerrenderer.dir/src/playerrenderer.cpp.s
+.PHONY : src/playerrenderer.cpp.s
+
 src/ray.o: src/ray.cpp.o
 .PHONY : src/ray.o
 
@@ -562,6 +599,7 @@ help:
 	@echo "... map"
 	@echo "... maprenderer"
 	@echo "... player"
+	@echo "... playerrenderer"
 	@echo "... ray"
 	@echo "... rayrenderer"
 	@echo "... renderer"
@@ -590,6 +628,9 @@ help:
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/playerrenderer.o"
+	@echo "... src/playerrenderer.i"
+	@echo "... src/playerrenderer.s"
 	@echo "... src/ray.o"
 	@echo "... src/ray.i"
 	@echo "... src/ray.s"

@@ -7,6 +7,7 @@
 #include<fstream>
 #include<sstream>
 #include<iostream>
+#include <math.h>
 
 //boilerplate shader class implementation
 class Shader
