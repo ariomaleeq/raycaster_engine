@@ -161,4 +161,6 @@ CMakeFiles/ray.dir/src/ray.cpp.o: \
  /usr/include/c++/10/bits/stl_uninitialized.h \
  /usr/include/c++/10/bits/stl_vector.h \
  /usr/include/c++/10/bits/stl_bvector.h \
- /usr/include/c++/10/bits/vector.tcc
+ /usr/include/c++/10/bits/vector.tcc \
+ /home/ario/cpp/raycaster_engine/include/map.h \
+ /home/ario/cpp/raycaster_engine/include/maprenderer.h

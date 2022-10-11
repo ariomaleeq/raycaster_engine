@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 #include "map.h"
 #include "player.h"
+#include "ray.h"
 
 // Represents the current state of the game
 enum GameState {
@@ -37,6 +38,7 @@ public:
 private:
     Player player;
     Map map;
+    Ray ray;
     };
 
 #endif

@@ -45,6 +45,8 @@ int main()
         int i = 0;
     while(!glfwWindowShouldClose(window))
     {
+        glEnable(GL_BLEND);
+glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         processInput(window, raycaster.playerReference());
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;

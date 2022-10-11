@@ -272,6 +272,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
   ../include/player.h \
   ../include/entity.h \
   ../include/playerrenderer.h \
+  ../include/ray.h \
+  ../include/rayrenderer.h \
   /usr/include/c++/10/functional \
   /usr/include/c++/10/tuple \
   /usr/include/c++/10/bits/uses_allocator.h \
@@ -401,6 +403,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/functional:
 
+../include/rayrenderer.h:
+
 ../include/playerrenderer.h:
 
 ../include/entity.h:
@@ -412,6 +416,8 @@ CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+../include/ray.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 

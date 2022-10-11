@@ -19,6 +19,7 @@ class Entity{
         virtual void rotateEntityCounterClockwise();
         virtual void printEntityState();
         virtual void renderEntity();
+        friend class Game;
     protected:
         std::array<float,3> state;//entity state: x,y,theta
         std::string name; //entity name in the game

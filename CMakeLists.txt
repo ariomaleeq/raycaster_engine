@@ -52,17 +52,18 @@ set_property(TARGET pthread PROPERTY IMPORTED_LOCATION "/usr/include/pthread.h")
 add_library(glad SHARED IMPORTED)
 set_property(TARGET glad PROPERTY IMPORTED_LOCATION "/usr/include/glad/glad.h")
 
+target_link_libraries(rayrenderer renderer)
 target_link_libraries(playerrenderer renderer)
 
 target_link_libraries(maprenderer renderer)
-
+target_link_libraries(ray renderer rayrenderer map entity player)
 target_link_libraries(player entity color shader playerrenderer)
 
 target_link_libraries(map entity player color shader maprenderer)
 
-target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color)
+target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color ray renderer rayrenderer maprenderer playerrenderer)
 
-target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader color ${Boost_LIBRARIES})
+target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader color ${Boost_LIBRARIES} ray)
 
 set(DCMAKE_EXPORT_COMPILE_COMMANDS 1 )
 set(DCMAKE_EXPORT_COMPILE_COMMANDS "${CMAKE_EXPORT_COMPILE_COMMANDS}" CACHE STRING "export compile_commands.json")

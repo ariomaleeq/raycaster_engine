@@ -203,7 +203,9 @@ CMakeFiles/ray.dir/src/ray.cpp.o: ../src/ray.cpp \
   /usr/include/c++/10/bits/stl_uninitialized.h \
   /usr/include/c++/10/bits/stl_vector.h \
   /usr/include/c++/10/bits/stl_bvector.h \
-  /usr/include/c++/10/bits/vector.tcc
+  /usr/include/c++/10/bits/vector.tcc \
+  ../include/map.h \
+  ../include/maprenderer.h
 
 
 /usr/include/c++/10/bits/vector.tcc:
@@ -217,6 +219,8 @@ CMakeFiles/ray.dir/src/ray.cpp.o: ../src/ray.cpp \
 ../include/colorsettings.h:
 
 /usr/include/c++/10/sstream:
+
+../include/maprenderer.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
 
@@ -395,6 +399,8 @@ CMakeFiles/ray.dir/src/ray.cpp.o: ../src/ray.cpp \
 /usr/include/c++/10/istream:
 
 /usr/include/c++/10/ext/new_allocator.h:
+
+../include/map.h:
 
 /usr/include/c++/10/bits/concept_check.h:
 

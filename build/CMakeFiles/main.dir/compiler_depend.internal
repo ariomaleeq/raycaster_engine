@@ -274,6 +274,8 @@ CMakeFiles/main.dir/src/main.cpp.o
  /home/ario/cpp/raycaster_engine/include/player.h
  /home/ario/cpp/raycaster_engine/include/entity.h
  /home/ario/cpp/raycaster_engine/include/playerrenderer.h
+ /home/ario/cpp/raycaster_engine/include/ray.h
+ /home/ario/cpp/raycaster_engine/include/rayrenderer.h
  /usr/include/c++/10/functional
  /usr/include/c++/10/tuple
  /usr/include/c++/10/bits/uses_allocator.h

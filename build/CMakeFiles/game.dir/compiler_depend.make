@@ -209,6 +209,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
   ../include/player.h \
   ../include/entity.h \
   ../include/playerrenderer.h \
+  ../include/ray.h \
+  ../include/rayrenderer.h \
   /usr/include/c++/10/memory \
   /usr/include/c++/10/bits/stl_tempbuf.h \
   /usr/include/c++/10/bits/stl_raw_storage_iter.h \
@@ -243,6 +245,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 
 /usr/include/c++/10/bits/stl_tempbuf.h:
 
+../include/rayrenderer.h:
+
 ../include/playerrenderer.h:
 
 ../include/entity.h:
@@ -254,6 +258,8 @@ CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp \
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+../include/ray.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 

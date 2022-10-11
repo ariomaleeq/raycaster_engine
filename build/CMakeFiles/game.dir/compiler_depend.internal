@@ -210,6 +210,8 @@ CMakeFiles/game.dir/src/game.cpp.o
  /home/ario/cpp/raycaster_engine/include/player.h
  /home/ario/cpp/raycaster_engine/include/entity.h
  /home/ario/cpp/raycaster_engine/include/playerrenderer.h
+ /home/ario/cpp/raycaster_engine/include/ray.h
+ /home/ario/cpp/raycaster_engine/include/rayrenderer.h
  /usr/include/c++/10/memory
  /usr/include/c++/10/bits/stl_tempbuf.h
  /usr/include/c++/10/bits/stl_raw_storage_iter.h

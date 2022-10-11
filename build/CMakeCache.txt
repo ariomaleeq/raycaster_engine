@@ -258,7 +258,7 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
 //Dependencies for the target
-game_LIB_DEPENDS:STATIC=general;OpenGL::GL;general;glfw;general;GL;general;X11;general;dl;general;pthread;general;glad;general;map;general;player;general;shader;general;color;
+game_LIB_DEPENDS:STATIC=general;OpenGL::GL;general;glfw;general;GL;general;X11;general;dl;general;pthread;general;glad;general;map;general;player;general;shader;general;color;general;ray;general;renderer;general;rayrenderer;general;maprenderer;general;playerrenderer;
 
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/local/lib/cmake/glfw3
@@ -275,6 +275,9 @@ player_LIB_DEPENDS:STATIC=general;entity;general;color;general;shader;general;pl
 //Dependencies for the target
 playerrenderer_LIB_DEPENDS:STATIC=general;renderer;
 
+//Dependencies for the target
+ray_LIB_DEPENDS:STATIC=general;renderer;general;rayrenderer;general;map;general;entity;general;player;
+
 //Value Computed by CMake
 raycaster_engine_BINARY_DIR:STATIC=/home/ario/cpp/raycaster_engine/build
 
@@ -283,6 +286,9 @@ raycaster_engine_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 raycaster_engine_SOURCE_DIR:STATIC=/home/ario/cpp/raycaster_engine
+
+//Dependencies for the target
+rayrenderer_LIB_DEPENDS:STATIC=general;renderer;
 
 
 ########################

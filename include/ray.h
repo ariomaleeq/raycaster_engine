@@ -7,14 +7,13 @@
 class Ray{
     public:
         std::array<float,3> playerstate; //copied state of the player: x,y,z,angle 
-        std::array<float,3> raystate;   //state of the ray: x,y,z,angle, distance to wall
-        std::array<std::array<float,3>,raynum> rayArray;                           //
-        Ray(std::array<float,3> &playerstate, Map &map);
+        std::array<float,raynum> raydistance;
+        std::array<int, raynum> colorarray;//
+        Ray();
         void calculateRayDistances(Map &map);
         void updateRayState(std::array<float,3> &playerstate, Map &map);
         // float closestMapBlockMultiple(float n, float x);
-        ~Ray();
-        void renderRay(std::array<float, 3> &state);
+        void renderRay();
         int mapx;            //
         int mapy; 
         
