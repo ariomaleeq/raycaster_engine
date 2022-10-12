@@ -11,8 +11,8 @@ void MapRenderer::initRenderData(std::array<int,128> &map){
         int columns = map.size()/8;
         // std::cout<<columns<<std::endl;
         int rows = map.size()/16;
-        float edgex = -0.990f;
-        float edgey = 0.99f;/* ; */
+        float edgex = -1.00f;
+        float edgey = 1.00f;/* ; */
         float* vertices = new float[map.size()*36];
        /*  float* vertices = new float[36]; */
         /* int i = 0; */
@@ -83,7 +83,7 @@ void MapRenderer::initRenderData(std::array<int,128> &map){
         edgex+=0.03125;
         if((i+1)%16==0 | i==15){
             edgey-=0.03125;//makes sure that the next row is drawn below the previous row
-            edgex = -0.99;  //re-sets the x coordinate to the left edge
+            edgex = -1.00;  //re-sets the x coordinate to the left edge
         }
         }
         //print out vertices

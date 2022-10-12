@@ -58,18 +58,7 @@ glEnableVertexAttribArray(1);
 
 
   delete[] rayarray[i];
-  glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0); 
-    this->shader.use();
-    glBindVertexArray(this->quadVAO[i]);
-    glLineWidth(100);
-    // for(int i = 0; i< 2;i++){
-    // glDrawArrays(GL_LINES,(i),((i+2)));
-    // }
-    glDrawArrays(GL_LINES,0,2);
-    // glDrawArrays(GL_LINES,2,2);
-    glBindVertexArray(0);
-rayoffset= rayoffset-0.5;
+   rayoffset= rayoffset-0.5;
     }
 
       
@@ -87,5 +76,16 @@ delete[] rayarray;
 
 void RayRenderer::DrawObject()
 {
+    for(int i = 0; i<raynum; i++){
+  this->shader.use();
+    glBindVertexArray(this->quadVAO[i]);
+    glLineWidth(30);
+    // for(int i = 0; i< 2;i++){
+    // glDrawArrays(GL_LINES,(i),((i+2)));
+    // }
+    glDrawArrays(GL_LINES,0,2);
+    // glDrawArrays(GL_LINES,2,2);
+    glBindVertexArray(0);
+    }
     }
 
