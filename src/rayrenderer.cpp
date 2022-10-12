@@ -1,20 +1,26 @@
 #include "rayrenderer.h"
 void RayRenderer::initRenderData(){
 }
-void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array<int, raynum> &color)
+void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array<int, raynum> &color, std::array<float, 3> &state)
 {  
    
    
     unsigned int VBO; 
     ColorSettings colors;
-    float rayoffset = -80;
+    float rayoffset = 80;
     float** rayarray = new float*[raynum];
  for(int i = 0; i<raynum;i++){
         rayarray[i]  = new float[12];
+        if(rayoffset<0){
+            rayoffset =-1*rayoffset ;
+        }
+        
     for(int j = 0; j<1; j++){ 
-        rayarray[i][j] = -1.0f+(i*(0.0125));
-        rayarray[i][j+1] = 1.0f+((((0.5/distance[i]))*cos((rayoffset/360)*2*M_PI)));
-        rayarray[i][j+2] = 0.000001f+(i*0.000001f);
+        float lineh = ((1/distance[i])*cos((rayoffset/360)*2*M_PI));
+        float lineo = 0.1-(lineh/2);
+        rayarray[i][j] = -1.0f+(i*(0.00625));
+        rayarray[i][j+1] =lineo; 
+        rayarray[i][j+2] = 0.0001f+(i*0.0001f);
         if(color[i] == 1){
             rayarray[i][j+3] = colors.brown[0];
             rayarray[i][j+4]= colors.brown[1];
@@ -29,12 +35,12 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
 
         
         rayarray[i][j+6] = rayarray[i][j]; 
-        rayarray[i][j+7] = 1.0f-(((0.5/distance[i]))*cos((rayoffset/360)*2*M_PI))-1.0f;
-        rayarray[i][j+8] = 0.000001f+(i*0.000001f);
+        rayarray[i][j+7] = lineh+lineo;
+        rayarray[i][j+8] = 0.0001f+(i*0.0001f);
         rayarray[i][j+9] = rayarray[i][j+3];
         rayarray[i][j+10] = rayarray[i][j+4];
         rayarray[i][j+11] = rayarray[i][j+5];
-        rayoffset= rayoffset+1;
+        
     }
  glGenVertexArrays(1, &this->quadVAO[i]); //THIS GOES FIRST
     glBindVertexArray(this->quadVAO[i]);
@@ -63,7 +69,7 @@ glEnableVertexAttribArray(1);
     glDrawArrays(GL_LINES,0,2);
     // glDrawArrays(GL_LINES,2,2);
     glBindVertexArray(0);
-
+rayoffset= rayoffset-0.5;
     }
 
       

@@ -3,7 +3,7 @@
 #include <array>
 #include <vector>
 #include "map.h"
-#define raynum 160 //ray number is set as a constant value
+#define raynum 320//ray number is set as a constant value
 class Ray{
     public:
         std::array<float,3> playerstate; //copied state of the player: x,y,z,angle 
