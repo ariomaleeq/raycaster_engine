@@ -26,17 +26,17 @@ void MapRenderer::initRenderData(std::array<int,128> &map){
         vertices[36*i+7]= edgey-0.00125f; //top right y
         vertices[36*i+8]=0.0f; //top right z
         vertices[36*i+12] = edgex+0.00125f; //bottom left x
-        vertices[36*i+13]= edgey-0.03125f+0.00125f; //bottom left y
+        vertices[36*i+13]= edgey-0.0625f+0.00125f; //bottom left y
         vertices[36*i+14]=0.0f; //bottom left z
         //second triangle
         vertices[36*i+18] = edgex+0.00125f; //bottom left x again
-        vertices[36*i+19]= edgey-0.03125+0.00125;//bottom left y again
+        vertices[36*i+19]= edgey-0.0625+0.00125;//bottom left y again
         vertices[36*i+20]=0.0f; //bottom left z again
         vertices[36*i+24] = edgex+0.03125f-0.00125f; //top right x again
         vertices[36*i+25]= edgey-0.00125f;//top right y again
         vertices[36*i+26] =0.0f;//top right z again
         vertices[36*i+30]= edgex+0.03125f-0.00125f;//bottom right x
-        vertices[36*i+31]= edgey-0.03125f+0.00125f;//bottom right y
+        vertices[36*i+31]= edgey-0.0625f+0.00125f;//bottom right y
         vertices[36*i+32]=0.0f;//bottom right z
         if(map[i]==1){
         vertices[36*i+3]=colormap.black[0];
@@ -82,7 +82,7 @@ void MapRenderer::initRenderData(std::array<int,128> &map){
         // std::cout<<edgex<<std::endl;
         edgex+=0.03125;
         if((i+1)%16==0 | i==15){
-            edgey-=0.03125;//makes sure that the next row is drawn below the previous row
+            edgey-=0.0625;//makes sure that the next row is drawn below the previous row
             edgex = -1.00;  //re-sets the x coordinate to the left edge
         }
         }

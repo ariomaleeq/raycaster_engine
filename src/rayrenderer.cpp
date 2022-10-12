@@ -18,9 +18,9 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
     for(int j = 0; j<1; j++){ 
         float lineh = ((1/distance[i])*cos((rayoffset/360)*2*M_PI));
         float lineo = 0.1-(lineh/2);
-        rayarray[i][j] = -1.0f+(i*(0.00625));
+        rayarray[i][j] = 5+(i*5);
         rayarray[i][j+1] =lineo; 
-        rayarray[i][j+2] = 0.0001f+(i*0.0001f);
+        rayarray[i][j+2] = 0;
         if(color[i] == 1){
             rayarray[i][j+3] = colors.brown[0];
             rayarray[i][j+4]= colors.brown[1];
@@ -36,7 +36,7 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
         
         rayarray[i][j+6] = rayarray[i][j]; 
         rayarray[i][j+7] = lineh+lineo;
-        rayarray[i][j+8] = 0.0001f+(i*0.0001f);
+        rayarray[i][j+8] = 0;
         rayarray[i][j+9] = rayarray[i][j+3];
         rayarray[i][j+10] = rayarray[i][j+4];
         rayarray[i][j+11] = rayarray[i][j+5];
@@ -78,6 +78,7 @@ void RayRenderer::DrawObject()
 {
     for(int i = 0; i<raynum; i++){
   this->shader.use();
+  this->shader.setMatrix4("projection", this->projection);
     glBindVertexArray(this->quadVAO[i]);
     glLineWidth(30);
     // for(int i = 0; i< 2;i++){

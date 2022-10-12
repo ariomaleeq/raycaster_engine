@@ -4,6 +4,9 @@
 #include "renderer.h"
 #include "colorsettings.h"
 #include "shader.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp> 
 #define raynum 320
 class RayRenderer : public Renderer {
     public:
@@ -13,5 +16,7 @@ class RayRenderer : public Renderer {
         void DrawObject() override;
         unsigned int quadVAO[raynum];
         unsigned int quadVBO[raynum];
+        glm::mat4 projection = glm::ortho(0.0f,1600.0f,800.0f,0.0f,-1.0f,1.0f);
+
 };
 #endif

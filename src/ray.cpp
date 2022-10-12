@@ -7,7 +7,7 @@ this->mapy = 1;
 }
 
 void Ray::renderRay(){
-    
+
     Shader rayshader("../src/shaders/ray.vs", "../src/shaders/ray.frag");
     RayRenderer rayrenderer(rayshader); //renderer of the ray
     rayrenderer.initRenderData(this->raydistance, this->colorarray, this->playerstate);
@@ -30,27 +30,27 @@ void Ray::updateRayState(std::array<float,3> &playerstate, Map &map){
 }
 void Ray::calculateRayDistances(Map &map){
     float rayoffset= 80;
- 
+
         for (int i=0; i<raynum;i++ ){
     float atan = -1/tan(((this->playerstate[2]+rayoffset)/360)*2*M_PI);
     float ntan = -tan(((this->playerstate[2]+rayoffset)/360)*2*M_PI);
-       
+
     float vraydistancey;
     float vraydistancex;
     float hraydistancex;
     float hraydistancey;
-    
+
 
        //find offset from current position to the nearest multiple of
     //0,03125 and in the end add the offset in the map display +0.00125
-    float mapoffset = 0.03125;
+    float mapoffset = 25;
     this->mapx = (int)(this->playerstate[0]/mapoffset);
     this->mapy = (int)(this->playerstate[1]/mapoffset);
     int hcheckx = this->mapx;
     int hchecky = this->mapy;
     int vcheckx = this->mapx;
     int vchecky = this->mapy;
-   
+
    //for checking horizontal line
     if(playerstate[2]+rayoffset>270){
     float yoffset = fmod(-1*(this->playerstate[1]),mapoffset);
@@ -58,10 +58,10 @@ void Ray::calculateRayDistances(Map &map){
     hraydistancey = this->playerstate[1]+yoffset;
     int increment = 0;
    while(increment<16){
-    
+
     hraydistancey = hraydistancey+mapoffset;
     hraydistancex = hraydistancex+mapoffset*(atan);
-   hcheckx = hcheckx+1;     
+   hcheckx = hcheckx+1;
     hchecky= hchecky+1;
     if(map.map[hcheckx+(hchecky*16)]==1){
         break;
@@ -77,10 +77,10 @@ void Ray::calculateRayDistances(Map &map){
     hraydistancey = this->playerstate[1]+mapoffset+yoffset;
     int increment = 0;
    while(increment<16){
-    
+
     hraydistancey = hraydistancey+mapoffset;
     hraydistancex = hraydistancex+mapoffset*(atan);
-   hcheckx = hcheckx+1;     
+   hcheckx = hcheckx+1;
     hchecky= hchecky-1;
     if(map.map[hcheckx+(hchecky*16)]==1){
         break;
@@ -97,10 +97,10 @@ void Ray::calculateRayDistances(Map &map){
     hraydistancey = this->playerstate[1]+yoffset;
     int increment = 0;
 while(increment<16){
-    
+
     hraydistancey = hraydistancey+mapoffset;
     hraydistancex = hraydistancex+mapoffset*(atan);
-   hcheckx = hcheckx-1;     
+   hcheckx = hcheckx-1;
     hchecky= hchecky-1;
     if(map.map[hcheckx+(hchecky*16)]==1){
         break;
@@ -118,10 +118,10 @@ while(increment<16){
     hraydistancey = this->playerstate[1]+yoffset;
     int increment = 0;
 while(increment<16){
- 
+
     hraydistancey = hraydistancey-mapoffset;
     hraydistancex = hraydistancex-mapoffset*(atan);
-   hcheckx = hcheckx-1;     
+   hcheckx = hcheckx-1;
     hchecky= hchecky-1;
     if(map.map[hcheckx+(hchecky*16)]==1){
         break;
@@ -142,9 +142,9 @@ while(increment<16){
    vraydistancex = this->playerstate[0]+xoffset;
  int increment = 0;
     while(increment <16){
-        
+
     vraydistancex = vraydistancex+mapoffset;
-    vraydistancey = vraydistancey+mapoffset*03125*(ntan);
+    vraydistancey = vraydistancey+mapoffset*(ntan);
     vcheckx = vcheckx+1;
     vchecky = vchecky+1;
      if(map.map[vcheckx+(vchecky*16)]==1){
@@ -162,9 +162,9 @@ while(increment<16){
     vraydistancex = this->playerstate[0]+xoffset;
  int increment = 0;
     while(increment <16){
-        
+
     vraydistancex = vraydistancex+mapoffset;
-    vraydistancey = vraydistancey+mapoffset*03125*(ntan);
+    vraydistancey = vraydistancey+mapoffset*(ntan);
     vcheckx = vcheckx+1;
     vchecky = vchecky-1;
      if(map.map[vcheckx+(vchecky*16)]==1){
@@ -185,9 +185,9 @@ while(increment<16){
 
     int increment = 0;
     while(increment <16){
-        
+
     vraydistancex = vraydistancex+mapoffset;
-    vraydistancey = vraydistancey+mapoffset*03125*(ntan);
+    vraydistancey = vraydistancey+mapoffset*(ntan);
     vcheckx = vcheckx-1;
     vchecky = vchecky-1;
      if(map.map[vcheckx+(vchecky*16)]==1){
@@ -211,9 +211,9 @@ while(increment<16){
 
     int increment = 0;
     while(increment <16){
-        
+
     vraydistancex = vraydistancex+mapoffset;
-    vraydistancey = vraydistancey+mapoffset*03125*(ntan);
+    vraydistancey = vraydistancey+mapoffset*(ntan);
     vcheckx = vcheckx-1;
     vchecky = vchecky+1;
      if(map.map[vcheckx+(vchecky*16)]==1){

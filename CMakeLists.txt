@@ -52,11 +52,14 @@ set_property(TARGET pthread PROPERTY IMPORTED_LOCATION "/usr/include/pthread.h")
 add_library(glad SHARED IMPORTED)
 set_property(TARGET glad PROPERTY IMPORTED_LOCATION "/usr/include/glad/glad.h")
 
-target_link_libraries(rayrenderer renderer)
+add_library(glm SHARED IMPORTED)
+set_property(TARGET glm PROPERTY IMPORTED_LOCATION "/usr/include/glm/glm.hpp")
+
+target_link_libraries(rayrenderer renderer glm)
 target_link_libraries(playerrenderer renderer)
 
 target_link_libraries(maprenderer renderer)
-target_link_libraries(ray renderer rayrenderer map entity player)
+target_link_libraries(ray renderer rayrenderer map entity player glm)
 target_link_libraries(player entity color shader playerrenderer)
 
 target_link_libraries(map entity player color shader maprenderer)

@@ -11,14 +11,14 @@ ColorSettings colormap2;
 //0,000195313 is 10 pixel
 
 float* vertices = new float[state.size()*4];
-vertices[0] = state[0]-0.96875f+(1.5*0.009765625f);
-vertices[1] = state[1]+0.96875f-(1.75*0.009765625f);
+vertices[0] = state[0]+ 25;
+vertices[1] = state[1]+ 25;
 vertices[2] = 0.0f;
 vertices[3] = colormap2.black[0];
 vertices[4] = colormap2.black[1];
 vertices[5] = colormap2.black[2];
-vertices[6] = vertices[0]+((cos((state[2]/360)*2*M_PI))*0.025);
-vertices[7] = vertices[1]+((sin((state[2]/360)*2*M_PI))*0.025);
+vertices[6] = vertices[0]+((cos((state[2]/360)*2*M_PI))*15);
+vertices[7] = vertices[1]+((sin((state[2]/360)*2*M_PI))*15);
 vertices[8] = 0.0f;
 vertices[9] = colormap2.black[0];
 vertices[10] = colormap2.black[1];
@@ -43,6 +43,7 @@ glBindVertexArray(0);
 
 void PlayerRenderer::DrawObject(){
 this->shader.use();
+this->shader.setMatrix4("projection", this->projection);
 glBindVertexArray(this->quadVAO);
 glLineWidth(2);
 glDrawArrays(GL_LINES,0,2);

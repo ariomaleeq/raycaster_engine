@@ -11,7 +11,7 @@ Entity::Entity() {
 
 void Entity::moveEntityUp() {
     // move the entity up naively
-    this->state[1] = (this->state[1]) + 0.001;
+    this->state[1] = (this->state[1]) - 1;
     //move entity vectorially
     // if(this->state[2] <=90){
     // this->state[0] = (this->state[0]) + 0.001 * cos(this->state[2]);
@@ -26,7 +26,7 @@ void Entity::moveEntityUp() {
 }
 void Entity::moveEntityDown(){
     //move entity down naively
-    this->state[1] = (this->state[1]) - 0.001;
+    this->state[1] = (this->state[1]) + 1;
     //move entity vectorially
     // this->state[0] = (this->state[0]) - 0.001 * cos(this->state[2]);
     // this->state[1] = (this->state[1]) - 0.001 * sin(this->state[2]);
@@ -35,7 +35,7 @@ void Entity::moveEntityDown(){
 }
 void Entity::moveEntityRight(){
     //move entity right naively
-    this->state[0] = (this->state[0]) + 0.001;
+    this->state[0] = (this->state[0]) +1; 
     //move entity vectorially
     // this->state[0] = (this->state[0]) + 0.001 * sin(this->state[2]);
     // this->state[1] = (this->state[1]) - 0.001 * cos(this->state[2]);
@@ -44,7 +44,7 @@ void Entity::moveEntityRight(){
 
 void Entity::moveEntityLeft(){
     //move entity left naively
-    this->state[0] = (this->state[0]) - 0.001;
+    this->state[0] = (this->state[0]) -1;
     //move entity vectorially
     // this->state[0] = (this->state[0]) - 0.001 * sin(this->state[2]);
     // this->state[1] = (this->state[1]) + 0.001 * cos(this->state[2]);
@@ -70,7 +70,7 @@ void Entity::printEntityState(){
     std::cout << "Entity: "<< this->name << " x: " << this->state[0] << " y: " << this->state[1] << " theta: " << this->state[2] << std::endl;
 }
 void Entity::renderEntity(){
- Shader playershader("../src/shaders/map.vs", "../src/shaders/map.frag");
+ Shader playershader("../src/shaders/ray.vs", "../src/shaders/ray.frag");
     PlayerRenderer playerrenderer(playershader);
     playerrenderer.initRenderData(this->state);
     playerrenderer.DrawObject();
