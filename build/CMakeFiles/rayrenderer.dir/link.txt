@@ -1,2 +1,0 @@
-/usr/bin/ar qc librayrenderer.a CMakeFiles/rayrenderer.dir/src/rayrenderer.cpp.o
-/usr/bin/ranlib librayrenderer.a
