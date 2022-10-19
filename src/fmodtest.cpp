@@ -2,6 +2,6 @@
 #include <iostream>
 int main(){
 
-    std::cout<< fmod(0.7475,0.03125)<<std::endl;
+    std::cout<< 8%6<<std::endl;
     return 0;
 }

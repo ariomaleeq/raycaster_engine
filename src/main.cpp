@@ -94,11 +94,13 @@ void processInput(GLFWwindow* window, Entity* playerentity)
         playerentity->moveEntityRight();
     }
     if(mousexchange<0){
-        playerentity->rotateEntityCounterClockwise();
-        mousexchange = 0;
+
+        playerentity->rotateEntityClockwise();
+               mousexchange = 0;
     }
     if(mousexchange>0){
-        playerentity->rotateEntityClockwise();
+ playerentity->rotateEntityCounterClockwise();
+
         mousexchange = 0;
     }
 }

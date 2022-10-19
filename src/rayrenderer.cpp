@@ -7,18 +7,33 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
    
     unsigned int VBO; 
     ColorSettings colors;
-    float rayoffset = 80;
+    float rayoffset = -40;
+    float rayangle = state[2]+rayoffset;
+    if (rayangle<0){
+        rayangle = 360 + rayangle;
+    }
+    if (rayangle>359){
+        rayangle = rayangle - 360;
+    }
+
     float** rayarray = new float*[raynum];
  for(int i = 0; i<raynum;i++){
+ if (rayangle<0){
+        rayangle = 360 + rayangle;
+    }
+    if (rayangle>359){
+        rayangle = rayangle - 360;
+    }
+
         rayarray[i]  = new float[12];
-        if(rayoffset<0){
-            rayoffset =-1*rayoffset ;
-        }
-        
+                
     for(int j = 0; j<1; j++){ 
-        float lineh = ((1/distance[i])*cos((rayoffset/360)*2*M_PI));
-        float lineo = 0.1-(lineh/2);
-        rayarray[i][j] = 5+(i*5);
+        float lineh = (((800*50)/distance[i])*cos(((state[2]-rayangle)/360)*2*M_PI));
+        if (lineh>800){
+            lineh = 800;;
+        }
+        float lineo = 400-(lineh/2);
+        rayarray[i][j] = (i*5);
         rayarray[i][j+1] =lineo; 
         rayarray[i][j+2] = 0;
         if(color[i] == 1){
@@ -58,7 +73,7 @@ glEnableVertexAttribArray(1);
 
 
   delete[] rayarray[i];
-   rayoffset= rayoffset-0.5;
+   rayangle= rayangle-(rayoffset*2/raynum);
     }
 
       

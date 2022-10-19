@@ -11,8 +11,8 @@ ColorSettings colormap2;
 //0,000195313 is 10 pixel
 
 float* vertices = new float[state.size()*4];
-vertices[0] = state[0]+ 25;
-vertices[1] = state[1]+ 25;
+vertices[0] = state[0];
+vertices[1] = state[1];
 vertices[2] = 0.0f;
 vertices[3] = colormap2.black[0];
 vertices[4] = colormap2.black[1];

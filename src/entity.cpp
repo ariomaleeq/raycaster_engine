@@ -52,18 +52,25 @@ void Entity::moveEntityLeft(){
 }
 
 void Entity::rotateEntityClockwise(){
-    this->state[2] = (this->state[2]) - 7.5;
+    this->state[2] = (this->state[2]) - 5;
 
     this->printEntityState();
-    if(state[2] ==-360){
+    if(state[2]<0){
+        state[2] = 359;
+    }
+    if(state[2]>359){
         state[2] = 0;
     }
+
 }
 void Entity::rotateEntityCounterClockwise(){
-    this->state[2] = (this->state[2]) + 7.5;
+    this->state[2] = (this->state[2]) + 5;
     this->printEntityState();
-    if(state[2]==360){
+    if(state[2]>359){
         state[2] = 0;
+    }
+    if(state[2]<0){
+        state[2] = 359;
     }
 }
 void Entity::printEntityState(){
