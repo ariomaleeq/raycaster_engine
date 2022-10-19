@@ -183,12 +183,12 @@ void Ray::calculateRayDistances(Map &map){
     }
     }
     //for checking vertical line
-   if(rayangle<90 && rayangle>270 ){
+   if(rayangle<90 || rayangle>270 ){
 if(rayangle<90){
     float xoffset = mapoffset-fmod(this->playerstate[0],mapoffset);
   vraydistancex = this->playerstate[0]+xoffset+0.001;
 
-  vraydistancey = this->playerstate[1]-(this->playerstate[0]-vraydistancex)*((ntan));
+  vraydistancey = this->playerstate[1]+(this->playerstate[0]-vraydistancex)*((ntan));
  
  int increment = 0;
     while(increment <16){
@@ -215,7 +215,7 @@ if(rayangle<90){
 else{
   float xoffset = mapoffset-fmod(this->playerstate[0],mapoffset);
 vraydistancex = this->playerstate[0]+xoffset+0.001;
-  vraydistancey = this->playerstate[1]+(this->playerstate[0]-vraydistancex)*((ntan));
+  vraydistancey = this->playerstate[1]-(this->playerstate[0]-vraydistancex)*((ntan));
    
  int increment = 0;
     while(increment <16){
@@ -245,7 +245,7 @@ vraydistancex = this->playerstate[0]+xoffset+0.001;
        if(rayangle<180){
     float xoffset = fmod(this->playerstate[0],mapoffset);
  vraydistancex = this->playerstate[0]-xoffset-0.001;
-    vraydistancey = this->playerstate[1]-((this->playerstate[0]-vraydistancex)*(ntan));
+    vraydistancey = this->playerstate[1]+((this->playerstate[0]-vraydistancex)*(ntan));
    
  int increment = 0;
     while(increment <16){
@@ -274,7 +274,7 @@ if(map.map[vcheckx+((vchecky)*16)]==1 && vcheckx<8 && vchecky<(16*8) && vcheckx>
        else{
   float xoffset = fmod(this->playerstate[0],mapoffset);
 vraydistancex = this->playerstate[0]-xoffset-0.001;
-    vraydistancey = this->playerstate[1]+((this->playerstate[0]-vraydistancex)*(ntan));
+    vraydistancey = this->playerstate[1]-((this->playerstate[0]-vraydistancex)*(ntan));
     
  int increment = 0;
     while(increment <16){
