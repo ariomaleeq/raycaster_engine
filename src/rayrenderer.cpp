@@ -7,12 +7,12 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
    
     unsigned int VBO; 
     ColorSettings colors;
-    float rayoffset = -40;
+    float rayoffset = -35;
     float rayangle = state[2]+rayoffset;
     if (rayangle<0){
         rayangle = 360 + rayangle;
     }
-    if (rayangle>359){
+    if (rayangle>360){
         rayangle = rayangle - 360;
     }
 
@@ -21,7 +21,7 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
  if (rayangle<0){
         rayangle = 360 + rayangle;
     }
-    if (rayangle>359){
+    if (rayangle>360){
         rayangle = rayangle - 360;
     }
 
@@ -29,12 +29,13 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
                 
     for(int j = 0; j<1; j++){ 
         float lineh = (((800*50)/distance[i])*cos(((state[2]-rayangle)/360)*2*M_PI));
+
         if (lineh>800){
             lineh = 800;;
         }
         float lineo = 400-(lineh/2);
         rayarray[i][j] = (i*5);
-        rayarray[i][j+1] =lineo; 
+        rayarray[i][j+1] = 0; //lineo; 
         rayarray[i][j+2] = 0;
         if(color[i] == 1){
             rayarray[i][j+3] = colors.brown[0];
@@ -50,7 +51,7 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
 
         
         rayarray[i][j+6] = rayarray[i][j]; 
-        rayarray[i][j+7] = lineh+lineo;
+        rayarray[i][j+7] =1;// lineh+lineo;
         rayarray[i][j+8] = 0;
         rayarray[i][j+9] = rayarray[i][j+3];
         rayarray[i][j+10] = rayarray[i][j+4];
@@ -88,12 +89,44 @@ delete[] rayarray;
 
 
 }
+void RayRenderer::DrawObject(){}
+void RayRenderer::DrawObject(std::array<float, raynum> &distance, std::array<int, raynum> &color, std::array<float, 3> &state)
+{   ColorSettings colors;
+    float rayoffset = -35;
+    float rayangle = state[2]+rayoffset;
 
-void RayRenderer::DrawObject()
-{
+    //Move all of the distances to this area as a uniform to multiply with the
+    //original vector value, scale the height of the line and translate the
+    //value based on the height
     for(int i = 0; i<raynum; i++){
+ if (rayangle<0){
+        rayangle = 360 + rayangle;
+    }
+    if (rayangle>360){
+        rayangle = rayangle - 360;
+    }
+
+  float lineh = (((800*50)/distance[i])*cos(((state[2]-rayangle)/360)*2*M_PI));
+
+        if (lineh>800){
+            lineh = 800.0;
+        }
+        float lineo = 400-(lineh/2);
+    glm::mat4 trans = glm::mat4(1.0f);
+    trans = glm::scale(trans,glm::vec3(1,lineh,1));
+    trans = glm::translate(trans,glm::vec3(0.0f,lineh,0.0));
+    glm::vec3 colorvec;
+    if(color[i] == 1){
+    colorvec = glm::vec3(colors.brown[0],colors.brown[1],colors.brown[2]);
+    }
+    else if(color[i]==0){
+    colorvec = glm::vec3(colors.darkbrown[0],colors.darkbrown[1],colors.darkbrown[2]);
+    }
+   
   this->shader.use();
   this->shader.setMatrix4("projection", this->projection);
+  this->shader.setMatrix4("transform",trans);
+  this->shader.setVector3("color", colorvec);
     glBindVertexArray(this->quadVAO[i]);
     glLineWidth(30);
     // for(int i = 0; i< 2;i++){

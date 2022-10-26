@@ -1,4 +1,7 @@
 #include "renderer.h"
+Renderer::Renderer(){
+    std::cout << "Renderer constructor called" << std::endl;
+}
 Renderer::Renderer(Shader& shader){
     this->shader = shader;
     this->initRenderData();

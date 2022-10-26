@@ -9,6 +9,7 @@
 #include <glm/gtc/type_ptr.hpp> 
 class Renderer{
     public:
+    Renderer();
     Renderer(Shader& shader);    
    
     void virtual initRenderData();

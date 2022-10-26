@@ -15,7 +15,9 @@ class Ray{
         // float closestMapBlockMultiple(float n, float x);
         void renderRay();
         int mapx;            //
-        int mapy; 
+        int mapy;
+        Shader rayshader;
+        RayRenderer rayrenderer;
         
 
 
