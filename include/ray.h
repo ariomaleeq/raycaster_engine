@@ -17,10 +17,6 @@ class Ray{
         int mapx;            //
         int mapy;
         Shader rayshader;
-        RayRenderer rayrenderer;
-        
-
-
-
+        RayRenderer* rayrenderer; 
 
 };

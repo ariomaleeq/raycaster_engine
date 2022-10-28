@@ -4,6 +4,7 @@ Renderer::Renderer(){
 }
 Renderer::Renderer(Shader& shader){
     this->shader = shader;
+
     this->initRenderData();
 }
 

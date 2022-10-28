@@ -15,9 +15,7 @@ void processInput(GLFWwindow* window, Entity* playerentity);
 void mouse_callback(GLFWwindow* window, double xpos, double ypose);
 int main()
 {
-    Game raycaster(WINDOW_WIDTH, WINDOW_HEIGHT);
-    ColorSettings color; 
-    glfwInit();
+       glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -37,6 +35,8 @@ int main()
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetCursorPosCallback(window, mouse_callback);
+    Game raycaster(WINDOW_WIDTH, WINDOW_HEIGHT);
+    ColorSettings color; 
 
     raycaster.Init();
     float deltaTime = 0.0f;

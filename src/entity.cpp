@@ -77,7 +77,7 @@ void Entity::printEntityState(){
     std::cout << "Entity: "<< this->name << " x: " << this->state[0] << " y: " << this->state[1] << " theta: " << this->state[2] << std::endl;
 }
 void Entity::renderEntity(){
- Shader playershader("../src/shaders/ray.vs", "../src/shaders/ray.frag");
+ Shader playershader("../src/shaders/player.vs", "../src/shaders/player.frag");
     PlayerRenderer playerrenderer(playershader);
     playerrenderer.initRenderData(this->state);
     playerrenderer.DrawObject();

@@ -18,6 +18,7 @@ class RayRenderer : public Renderer {
         unsigned int quadVAO[raynum];
         unsigned int quadVBO[raynum];
         glm::mat4 projection = glm::ortho(0.0f,1600.0f,800.0f,0.0f,-1.0f,1.0f);
+        ColorSettings colors;
 
 };
 #endif
