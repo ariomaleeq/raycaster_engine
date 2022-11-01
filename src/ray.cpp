@@ -62,9 +62,9 @@ void Ray::calculateRayDistances(Map &map){
     //0,03125 and in the end add the offset in the map display +0.00125
     float mapoffset = 25;
     this->mapx = (int)(this->playerstate[0]/mapoffset);
-    std::cout<<"the value of mapx is:"<<this->mapx<<std::endl;
+    // std::cout<<"the value of mapx is:"<<this->mapx<<std::endl;
     this->mapy = (int)(this->playerstate[1]/mapoffset);
-    std::cout<<"the value of mapy is:"<<this->mapy<<std::endl;
+    // std::cout<<"the value of mapy is:"<<this->mapy<<std::endl;
     int hcheckx;
     int hchecky;
     int vcheckx ;
