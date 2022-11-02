@@ -1,4 +1,4 @@
 # C++ Raycaster Engine with OpenGL(GLFW3)
 
 
-![Screenshot from 2022-10-29 13-08-36](https://user-images.githubusercontent.com/56722866/198828183-46cde544-cc9f-4f98-b5b6-1d30c3650afe.png)
+![Screenshot from 2022-11-02 17-19-37](https://user-images.githubusercontent.com/56722866/199544906-fde168a1-dce6-4ab9-9f5c-bf535dd892ce.png)
