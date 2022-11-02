@@ -6,6 +6,7 @@
 #include "map.h"
 #include "player.h"
 #include "ray.h"
+#include "background.h"
 
 // Represents the current state of the game
 enum GameState {
@@ -39,6 +40,8 @@ private:
     Player player;
     Map map;
     Ray ray;
+
+    Background background;
     };
 
 #endif

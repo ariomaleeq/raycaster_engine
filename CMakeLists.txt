@@ -25,7 +25,9 @@ set(MAP_RENDERER_HEADER include/maprenderer.h)
 set(RAY_RENDERER_HEADER include/rayrenderer.h)
 set(COLOR_HEADER include/colorsettings.h
     )
+set(BACKGROUND_HEADER include/background.h)
 
+add_library(background src/background.cpp ${BACKGROUND_HEADER})
 add_library(map src/map.cpp ${MAP_HEADER})
 add_library(player src/player.cpp ${PLAYER_HEADER})
 add_library(game src/game.cpp ${GAME_HEADER})
@@ -57,14 +59,14 @@ set_property(TARGET glm PROPERTY IMPORTED_LOCATION "/usr/include/glm/glm.hpp")
 
 target_link_libraries(rayrenderer renderer glm)
 target_link_libraries(playerrenderer renderer)
-
+target_link_libraries(background shader color)
 target_link_libraries(maprenderer renderer)
 target_link_libraries(ray renderer rayrenderer map entity player glm)
 target_link_libraries(player entity color shader playerrenderer)
 
 target_link_libraries(map entity player color shader maprenderer)
 
-target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color ray renderer rayrenderer maprenderer playerrenderer)
+target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color ray renderer rayrenderer maprenderer playerrenderer background)
 
 target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader color ${Boost_LIBRARIES} ray)
 
