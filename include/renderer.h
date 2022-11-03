@@ -8,25 +8,27 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include "texture.h"
+#include "stb_image.h"
 
 class Renderer{
     public:
     Renderer();
-    Renderer(Shader& shader);    
-   
+    Renderer(Shader& shader);
+
     void virtual initRenderData();
-    void virtual initSpriteData(Texture2D &texture, glm::vec2 position, 
-            glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, 
-            glm::vec3 color = glm::vec3(1.0f));
-    void virtual drawSprite(Texture2D &texture, glm::vec2 position, 
+    void virtual initSpriteData();
+    void virtual drawSprite(glm::vec2 position,
   glm::vec2 size, float rotate, glm::vec3 color);
     void virtual DrawObject();
+    void virtual loadTexture(const char *file, bool alpha, Shader &shader);
+
     virtual ~Renderer();
 
     protected:
-
+   Texture2D texture;
     Shader shader;
-    
+    Shader spriteshader;
+glm::mat4 projection = glm::ortho(0.0f,1600.0f,800.0f,0.0f,-1.0f,1.0f);
 
     unsigned int spriteVAO;
 

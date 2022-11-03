@@ -27,6 +27,7 @@ class Entity{
         std::string name; //entity name in the game
         int width; //width in pixels
         int length;//length in pixels
-        Map map;              //
+        Map map;
+        PlayerRenderer playerrenderer;//
 };
 #endif 

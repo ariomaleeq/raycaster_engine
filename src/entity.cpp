@@ -23,8 +23,8 @@ void Entity::moveEntityUp() {
     mapx = (int)nextstatex/25;
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
-    this->state[0] = (this->state[0]) +0.5* cos(this->state[2] * M_PI / 180);
-    this->state[1] = (this->state[1]) +0.5* sin(this->state[2] * M_PI/180);
+    this->state[0] = (this->state[0]) +0.75* cos(this->state[2] * M_PI / 180);
+    this->state[1] = (this->state[1]) +0.75* sin(this->state[2] * M_PI/180);
     } 
     /*   } */
     /* else if(this->state[2] <360 && this->state[2] > 180){ */
@@ -47,8 +47,8 @@ void Entity::moveEntityDown(){
     mapx = (int)nextstatex/25;
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
-    this->state[0] = (this->state[0]) -0.5* cos(this->state[2] * M_PI / 180);
-    this->state[1] = (this->state[1]) -0.5* sin(this->state[2] * M_PI/180);
+    this->state[0] = (this->state[0]) -0.75* cos(this->state[2] * M_PI / 180);
+    this->state[1] = (this->state[1]) -0.75* sin(this->state[2] * M_PI/180);
     }
   /*   } */
 
@@ -73,8 +73,8 @@ void Entity::moveEntityRight(){
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
 
-    this->state[1] = (this->state[1]) +0.5* cos(this->state[2] * M_PI / 180);
-    this->state[0] = (this->state[0]) -0.5* sin(this->state[2] * M_PI/180);
+    this->state[1] = (this->state[1]) +0.75* cos(this->state[2] * M_PI / 180);
+    this->state[0] = (this->state[0]) -0.75* sin(this->state[2] * M_PI/180);
     }
     this->printEntityState();
 }
@@ -95,8 +95,8 @@ void Entity::moveEntityLeft(){
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
 
-    this->state[1] = (this->state[1]) -0.5* cos(this->state[2] * M_PI / 180);
-    this->state[0] = (this->state[0]) +0.5* sin(this->state[2] * M_PI/180);
+    this->state[1] = (this->state[1]) -0.75* cos(this->state[2] * M_PI / 180);
+    this->state[0] = (this->state[0]) +0.75* sin(this->state[2] * M_PI/180);
     }
     this->printEntityState();
 }
@@ -128,9 +128,13 @@ void Entity::printEntityState(){
 }
 void Entity::renderEntity(){
  Shader playershader("../src/shaders/player.vs", "../src/shaders/player.frag");
-    PlayerRenderer playerrenderer(playershader);
-    playerrenderer.initRenderData(this->state);
-    playerrenderer.DrawObject();
+    this->playerrenderer = PlayerRenderer(playershader);
+    this->playerrenderer.initRenderData(this->state);
+    this->playerrenderer.DrawObject();
+    glm::vec2 position = glm::vec2(550.0f, 550.0f);
+    glm::vec2 size = glm::vec2(this->width, this->length);
+    glm::vec3 color = glm::vec3(1.0f);
+    this->playerrenderer.drawSprite(position, size, 0, color);
     
 }
 

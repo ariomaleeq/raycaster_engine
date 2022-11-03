@@ -7,7 +7,7 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
 
 
     unsigned int VBO;
-        float rayoffset = -35;
+        float rayoffset = -25;
     float rayangle = state[2]+rayoffset;
     if (rayangle<0){
         rayangle = 360 + rayangle;
@@ -92,7 +92,7 @@ delete[] rayarray;
 void RayRenderer::DrawObject(){}
 void RayRenderer::DrawObject(std::array<float, raynum> &distance, std::array<int, raynum> &color, std::array<float, 3> &state)
 {
-    float rayoffset = -35;
+    float rayoffset = -25;
     float rayangle = state[2]+rayoffset;
     //Move all of the distances to this area as a uniform to multiply with the
     //original vector value, scale the height of the line and translate the

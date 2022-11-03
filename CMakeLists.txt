@@ -61,6 +61,7 @@ set_property(TARGET glad PROPERTY IMPORTED_LOCATION "/usr/include/glad/glad.h")
 add_library(glm SHARED IMPORTED)
 set_property(TARGET glm PROPERTY IMPORTED_LOCATION "/usr/include/glm/glm.hpp")
 
+target_link_libraries(renderer shader texture stb_image)
 target_link_libraries(rayrenderer renderer glm)
 target_link_libraries(playerrenderer renderer stb_image)
 target_link_libraries(background shader color)

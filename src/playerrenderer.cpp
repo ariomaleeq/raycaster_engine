@@ -5,6 +5,8 @@ void PlayerRenderer::initRenderData(){
 
 }
 
+
+
 void PlayerRenderer::initRenderData(std::array<float, 3> &state){
 unsigned int VBO;
 ColorSettings colormap2;
