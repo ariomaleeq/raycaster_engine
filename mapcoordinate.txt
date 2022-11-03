@@ -1,0 +1,2 @@
+Entity: Player x: 0.429998 y: -0.172 theta: 0
+
