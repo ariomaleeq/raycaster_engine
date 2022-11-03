@@ -5,6 +5,8 @@
 #include <string>
 #include <array>
 #include "playerrenderer.h"
+#include <math.h>
+#include "map.h"
 //Abstract implementation of all entities in the game: player, enemies, etc.
 
 class Entity{
@@ -25,5 +27,6 @@ class Entity{
         std::string name; //entity name in the game
         int width; //width in pixels
         int length;//length in pixels
+        Map map;              //
 };
 #endif 

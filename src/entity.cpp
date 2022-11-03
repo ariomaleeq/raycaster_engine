@@ -11,23 +11,47 @@ Entity::Entity() {
 
 void Entity::moveEntityUp() {
     // move the entity up naively
-    this->state[1] = (this->state[1]) - 1;
+    // this->state[1] = (this->state[1]) - 1;
     //move entity vectorially
     // if(this->state[2] <=90){
-    // this->state[0] = (this->state[0]) + 0.001 * cos(this->state[2]);
-    // this->state[1] = (this->state[1]) + 0.001 * sin(this->state[2]);
-    // }
-    // else if(this->state[2] <360 && this->state[2] > 180){
-    // this->state[0] = (this->state[0]) + 0.001 * cos(this->state[2]);
-    // this->state[1] = (this->state[1]) + 0.001 * sin(this->state[2]);
+    float nextstatex;
+    float nextstatey;
+    int mapx;
+    int mapy;
+    nextstatex = this->state[0] + 5*cos(this->state[2]*M_PI/180);
+    nextstatey = this->state[1] + 5*sin(this->state[2]*M_PI/180);
+    mapx = (int)nextstatex/25;
+    mapy = (int)nextstatey/25;
+    if(map.map[mapx+(mapy*16)] ==0) {
+    this->state[0] = (this->state[0]) +0.5* cos(this->state[2] * M_PI / 180);
+    this->state[1] = (this->state[1]) +0.5* sin(this->state[2] * M_PI/180);
+    } 
+    /*   } */
+    /* else if(this->state[2] <360 && this->state[2] > 180){ */
+    /* this->state[0] = (this->state[0]) + 0.001 * cos(this->state[2]); */
+    /* this->state[1] = (this->state[1]) + 0.001 * sin(this->state[2]); */
     //print entity state
     this->printEntityState();
 
 }
 void Entity::moveEntityDown(){
     //move entity down naively
-    this->state[1] = (this->state[1]) + 1;
+    // this->state[1] = (this->state[1]) + 1;
     //move entity vectorially
+    float nextstatex;
+    float nextstatey;
+    int mapx;
+    int mapy;
+    nextstatex = this->state[0] - 5*cos(this->state[2]*M_PI/180);
+    nextstatey = this->state[1] - 5*sin(this->state[2]*M_PI/180);
+    mapx = (int)nextstatex/25;
+    mapy = (int)nextstatey/25;
+    if(map.map[mapx+(mapy*16)] ==0) {
+    this->state[0] = (this->state[0]) -0.5* cos(this->state[2] * M_PI / 180);
+    this->state[1] = (this->state[1]) -0.5* sin(this->state[2] * M_PI/180);
+    }
+  /*   } */
+
     // this->state[0] = (this->state[0]) - 0.001 * cos(this->state[2]);
     // this->state[1] = (this->state[1]) - 0.001 * sin(this->state[2]);
     this->printEntityState();
@@ -35,19 +59,45 @@ void Entity::moveEntityDown(){
 }
 void Entity::moveEntityRight(){
     //move entity right naively
-    this->state[0] = (this->state[0]) +1; 
+    // this->state[0] = (this->state[0]) +1;
     //move entity vectorially
     // this->state[0] = (this->state[0]) + 0.001 * sin(this->state[2]);
     // this->state[1] = (this->state[1]) - 0.001 * cos(this->state[2]);
+    float nextstatex;
+    float nextstatey;
+    int mapx;
+    int mapy;
+    nextstatey = this->state[1] + 5*cos(this->state[2]*M_PI/180);
+    nextstatex = this->state[0] - 5*sin(this->state[2]*M_PI/180);
+    mapx = (int)nextstatex/25;
+    mapy = (int)nextstatey/25;
+    if(map.map[mapx+(mapy*16)] ==0) {
+
+    this->state[1] = (this->state[1]) +0.5* cos(this->state[2] * M_PI / 180);
+    this->state[0] = (this->state[0]) -0.5* sin(this->state[2] * M_PI/180);
+    }
     this->printEntityState();
 }
 
 void Entity::moveEntityLeft(){
     //move entity left naively
-    this->state[0] = (this->state[0]) -1;
+    // this->state[0] = (this->state[0]) -1;
     //move entity vectorially
     // this->state[0] = (this->state[0]) - 0.001 * sin(this->state[2]);
     // this->state[1] = (this->state[1]) + 0.001 * cos(this->state[2]);
+    float nextstatex;
+    float nextstatey;
+    int mapx;
+    int mapy;
+    nextstatey = this->state[1] - 5*cos(this->state[2]*M_PI/180);
+    nextstatex = this->state[0] + 5*sin(this->state[2]*M_PI/180);
+    mapx = (int)nextstatex/25;
+    mapy = (int)nextstatey/25;
+    if(map.map[mapx+(mapy*16)] ==0) {
+
+    this->state[1] = (this->state[1]) -0.5* cos(this->state[2] * M_PI / 180);
+    this->state[0] = (this->state[0]) +0.5* sin(this->state[2] * M_PI/180);
+    }
     this->printEntityState();
 }
 
@@ -81,6 +131,7 @@ void Entity::renderEntity(){
     PlayerRenderer playerrenderer(playershader);
     playerrenderer.initRenderData(this->state);
     playerrenderer.DrawObject();
+    
 }
 
 
