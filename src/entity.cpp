@@ -127,14 +127,14 @@ void Entity::printEntityState(){
     std::cout << "Entity: "<< this->name << " x: " << this->state[0] << " y: " << this->state[1] << " theta: " << this->state[2] << std::endl;
 }
 void Entity::renderEntity(){
- Shader playershader("../src/shaders/player.vs", "../src/shaders/player.frag");
-    this->playerrenderer = PlayerRenderer(playershader);
+     
     this->playerrenderer.initRenderData(this->state);
     this->playerrenderer.DrawObject();
-    glm::vec2 position = glm::vec2(550.0f, 550.0f);
-    glm::vec2 size = glm::vec2(this->width, this->length);
+    glm::vec2 position = glm::vec2(550.0f, 350.0f);
+    glm::vec2 size = glm::vec2(500.0f, 500.0f);
     glm::vec3 color = glm::vec3(1.0f);
-    this->playerrenderer.drawSprite(position, size, 0, color);
+    Renderer* spriterenderer = &this->playerrenderer;
+    spriterenderer ->drawSprite(position, size, 0, color);
     
 }
 

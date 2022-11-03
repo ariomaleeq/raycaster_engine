@@ -2,9 +2,15 @@
 Renderer::Renderer(){
     std::cout << "Renderer constructor called" << std::endl;
 }
+
 Renderer::Renderer(Shader& shader){
     this->shader = shader;
+    this->initRenderData();
+}
 
+Renderer::Renderer(Shader& shader1, Shader& shader2){
+    this->shader = shader1;
+this->spriteshader = shader2;
     this->initRenderData();
 }
 
@@ -59,7 +65,7 @@ void Renderer::drawSprite(glm::vec2 position,
     model = glm::scale(model, glm::vec3(size, 1.0f));
 
     this->spriteshader.setMatrix4("model", model);
-    this->spriteshader.setVector3("spriteColor", color);
+    // this->spriteshader.setVector3("spriteColor", color);
 
     glActiveTexture(GL_TEXTURE0);
     this->texture.Bind();
@@ -68,7 +74,7 @@ void Renderer::drawSprite(glm::vec2 position,
     glDrawArrays(GL_TRIANGLES, 0, 6);
     glBindVertexArray(0);
 }
-void Renderer::loadTexture(const char *file, bool alpha, Shader &shader){
+void Renderer::loadTexture(const char *file, bool alpha){
     if (alpha){
     this->texture.Internal_Format = GL_RGBA;
     this->texture.Image_Format = GL_RGBA;
@@ -79,6 +85,6 @@ void Renderer::loadTexture(const char *file, bool alpha, Shader &shader){
 
     this->texture.Generate(width, height, data);
     stbi_image_free(data);
-    this->spriteshader = shader;
+    
 
 }

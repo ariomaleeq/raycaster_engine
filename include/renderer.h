@@ -13,14 +13,15 @@
 class Renderer{
     public:
     Renderer();
-    Renderer(Shader& shader);
+    Renderer(Shader &shader);
+    Renderer(Shader& shader1, Shader& shader2);
 
     void virtual initRenderData();
     void virtual initSpriteData();
     void virtual drawSprite(glm::vec2 position,
   glm::vec2 size, float rotate, glm::vec3 color);
     void virtual DrawObject();
-    void virtual loadTexture(const char *file, bool alpha, Shader &shader);
+    void virtual loadTexture(const char *file, bool alpha);
 
     virtual ~Renderer();
 
