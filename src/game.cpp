@@ -16,6 +16,7 @@ void Game::ProcessInput(float dt){
 
 void Game::Update(float dt){
     this->ray.updateRayState(this->player.state, this->map);
+    this->player.updateEntityState();
     //this will be where the collision detection is called to prevent collisions
 
 }

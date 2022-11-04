@@ -8,7 +8,9 @@ Entity::Entity() {
     this->state[2] = (0.0); // angle: theta from x axis
 }
 
+void Entity::updateEntityState(){
 
+}
 void Entity::moveEntityUp() {
     // move the entity up naively
     // this->state[1] = (this->state[1]) - 1;
@@ -23,8 +25,8 @@ void Entity::moveEntityUp() {
     mapx = (int)nextstatex/25;
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
-    this->state[0] = (this->state[0]) +0.75* cos(this->state[2] * M_PI / 180);
-    this->state[1] = (this->state[1]) +0.75* sin(this->state[2] * M_PI/180);
+    this->state[0] = (this->state[0]) +1* cos(this->state[2] * M_PI / 180);
+    this->state[1] = (this->state[1]) +1* sin(this->state[2] * M_PI/180);
     } 
     /*   } */
     /* else if(this->state[2] <360 && this->state[2] > 180){ */
@@ -47,8 +49,8 @@ void Entity::moveEntityDown(){
     mapx = (int)nextstatex/25;
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
-    this->state[0] = (this->state[0]) -0.75* cos(this->state[2] * M_PI / 180);
-    this->state[1] = (this->state[1]) -0.75* sin(this->state[2] * M_PI/180);
+    this->state[0] = (this->state[0]) -1* cos(this->state[2] * M_PI / 180);
+    this->state[1] = (this->state[1]) -1* sin(this->state[2] * M_PI/180);
     }
   /*   } */
 
@@ -137,6 +139,18 @@ void Entity::renderEntity(){
     spriterenderer ->drawSprite(position, size, 0, color);
     
 }
+void Entity::updateEntityState(int &state){
 
+    if(state == 0){
+        this->spritestate = IDLE;
+    }
+    if(state == 1){
+        this->spritestate = SHOOTING;
+    }
+    if(state == 2){
+        this->spritestate = RECOIL;
+    }
+    // move the player
+}
 
 

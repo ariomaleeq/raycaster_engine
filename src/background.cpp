@@ -8,12 +8,12 @@ Background::Background(){
 void Background::initRenderData(){
 float vertices[] = {
     // positions          // colors
-    -1.0f,  0.0f, 0.0f,  background.sand[0]-0.25f, background.sand[1]-0.25f ,background.sand[2]-0.25f  ,  // bottom right
-    -1.0f, -1.0f, 0.0f,  background.sand[0]-0.25f, background.sand[1]-0.25f ,background.sand[2]-0.25f  , // bottom left
-    1.0f, 0.0f, 0.0f,  background.sand[0]-0.25f, background.sand[1]-0.25f ,background.sand[2]-0.25f  , // top left
-    1.0f,  0.0f, 0.0f,  background.sand[0]-0.25f, background.sand[1]-0.25f ,background.sand[2]-0.25f  , // top right
-    1.0f,  -1.0f, 0.0f,  background.sand[0]-0.25f, background.sand[1]-0.25f ,background.sand[2]-0.25f  ,
-    -1.0f,  -1.0f, 0.0f,  background.sand[0]-0.25f, background.sand[1]-0.25f ,background.sand[2]-0.25f  ,
+    -1.0f,  0.0f, 0.0f,  background.sand[0]-0.35f, background.sand[1]-0.35f ,background.sand[2]-0.35f  ,  // bottom right
+    -1.0f, -1.0f, 0.0f,  background.sand[0]-0.35f, background.sand[1]-0.35f ,background.sand[2]-0.35f  , // bottom left
+    1.0f, 0.0f, 0.0f,  background.sand[0]-0.35f, background.sand[1]-0.35f ,background.sand[2]-0.35f  , // top left
+    1.0f,  0.0f, 0.0f,  background.sand[0]-0.35f, background.sand[1]-0.35f ,background.sand[2]-0.35f  , // top right
+    1.0f,  -1.0f, 0.0f,  background.sand[0]-0.35f, background.sand[1]-0.35f ,background.sand[2]-0.35f  ,
+    -1.0f,  -1.0f, 0.0f,  background.sand[0]-0.35f, background.sand[1]-0.35f ,background.sand[2]-0.35f  ,
 };
 unsigned int VBO;
 glGenVertexArrays(1, &this->VAO);

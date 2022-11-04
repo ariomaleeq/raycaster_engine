@@ -12,6 +12,13 @@
 class Entity{
 
     public:
+    enum entityState{
+        IDLE=0,
+        SHOOTING,
+        RECOIL,
+        WALKING
+    };
+ int spritestate;
         Entity();
         virtual void moveEntityUp();
         virtual void moveEntityDown();
@@ -21,6 +28,8 @@ class Entity{
         virtual void rotateEntityCounterClockwise();
         virtual void printEntityState();
         virtual void renderEntity();
+        virtual void updateEntityState();
+        virtual void updateEntityState(int &state);
         friend class Game;
     protected:
         std::array<float,3> state;//entity state: x,y,theta

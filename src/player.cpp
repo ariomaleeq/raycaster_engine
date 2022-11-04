@@ -19,7 +19,20 @@ Shader spriteshader("../src/shaders/sprite.vs", "../src/shaders/sprite.frag");
     spriterenderer->initSpriteData();
     spriterenderer->initRenderData();
 std::cout << "Entity: "<< this->name <<"created" << std::endl;
+this->spritestate = IDLE;
 }
 
-    // move the player
+void Player::updateEntityState(){
+    Renderer* spriterenderer = &this->playerrenderer;
+    if(this->spritestate == IDLE){
+        spriterenderer->loadTexture("../images/revolver-idle.png", true);
+    }
+    if(this->spritestate == SHOOTING){
+        spriterenderer->loadTexture("../images/revolver-shot.png", true);
+    }
+    if(this->spritestate == RECOIL){
+        spriterenderer->loadTexture("../images/revolver-cock.png", true);
+    }
+
+}
 
