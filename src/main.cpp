@@ -5,6 +5,9 @@
 #include <functional>
 #include <boost/bind.hpp>
 #include <thread>
+#include <SDL2/SDL.h>
+#include <sound.h>
+#include <SDLapp.h>
 #define WINDOW_WIDTH 1600
 #define WINDOW_HEIGHT 800
 //global variables that tracks mouse movement
@@ -12,6 +15,9 @@ int previous_mousex;
 int mousexchange;
 int mouse_button_pressed;
 float time_pressed;
+SDLapp* app;
+Sound* gunshot;
+Sound* cock;
 //functions for callbacks: framebuffer, mouse position, input processing
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window, Entity* playerentity);
@@ -19,7 +25,12 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypose);
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 int main()
 {
-       glfwInit();
+    app = new SDLapp(SDL_INIT_AUDIO);
+    gunshot = new Sound("../audio/gunshot_short.wav");
+    gunshot->setupDevice();
+    cock = new Sound("../audio/cock.wav");
+    cock->setupDevice();
+    glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -77,7 +88,7 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     {
          mouse_button_pressed = 1;
             time_pressed = glfwGetTime();
-
+gunshot->playSound();
     }
    }
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
@@ -122,15 +133,23 @@ void processInput(GLFWwindow* window, Entity* playerentity)
     }
     if(mouse_button_pressed == 1){
         std::cout<<"mouse button pressed"<<std::endl;
-        mouse_button_pressed = 0;
-                   state = 1;
+if(glfwGetTime()-time_pressed<0.2){
+        state = 1;
+                   
             playerentity->updateEntityState(state);
-}
-if(mouse_button_pressed ==0){
-      if(glfwGetTime()-time_pressed>0.25 && glfwGetTime()-time_pressed<0.5){
-        state = 2;
+} 
+        if(glfwGetTime()-time_pressed>0.2 && glfwGetTime()-time_pressed<0.5){
+                 state = 2;
+        cock->playSound();
         playerentity->updateEntityState(state);
+     
+    mouse_button_pressed = 0;
+
     }
+    }
+if(mouse_button_pressed ==0){
+   
+   
     if(glfwGetTime()-time_pressed > 0.5){
         state = 0;
         playerentity->updateEntityState(state);
