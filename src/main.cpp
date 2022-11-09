@@ -18,6 +18,7 @@ float time_pressed;
 SDLapp* app;
 Sound* gunshot;
 Sound* cock;
+int playerstate;
 //functions for callbacks: framebuffer, mouse position, input processing
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window, Entity* playerentity);
@@ -62,7 +63,7 @@ int main()
     while(!glfwWindowShouldClose(window))
     {
         glEnable(GL_BLEND);
-glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         processInput(window, raycaster.playerReference());
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
@@ -84,7 +85,7 @@ glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
-    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
+    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && playerstate ==0 )
     {
          mouse_button_pressed = 1;
             time_pressed = glfwGetTime();
@@ -99,7 +100,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 }
 void processInput(GLFWwindow* window, Entity* playerentity)
 {
-    int state = 0;
+    
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, true);
@@ -134,14 +135,14 @@ void processInput(GLFWwindow* window, Entity* playerentity)
     if(mouse_button_pressed == 1){
         std::cout<<"mouse button pressed"<<std::endl;
 if(glfwGetTime()-time_pressed<0.2){
-        state = 1;
+        playerstate= 1;
                    
-            playerentity->updateEntityState(state);
+            playerentity->updateEntityState(playerstate);
 } 
         if(glfwGetTime()-time_pressed>0.2 && glfwGetTime()-time_pressed<0.5){
-                 state = 2;
+                 playerstate = 2;
         cock->playSound();
-        playerentity->updateEntityState(state);
+        playerentity->updateEntityState(playerstate);
      
     mouse_button_pressed = 0;
 
@@ -151,8 +152,8 @@ if(mouse_button_pressed ==0){
    
    
     if(glfwGetTime()-time_pressed > 0.5){
-        state = 0;
-        playerentity->updateEntityState(state);
+        playerstate = 0;
+        playerentity->updateEntityState(playerstate);
     }
    }
 }

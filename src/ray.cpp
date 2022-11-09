@@ -1,20 +1,20 @@
 #include "ray.h"
 
 Ray::Ray(){
-this->mapx = 2;
-this->mapy = 2;
+    this->mapx = 2;
+    this->mapy = 2;
 
-this->rayshader = Shader("../src/shaders/ray.vs", "../src/shaders/ray.frag");
+    this->rayshader = Shader("../src/shaders/ray.vs", "../src/shaders/ray.frag");
 
-this->rayrenderer = new RayRenderer(this->rayshader); //renderer of the ray
+    this->rayrenderer = new RayRenderer(this->rayshader); //renderer of the ray
 
-this->rayrenderer->initRenderData(this->raydistance, this->colorarray, this->playerstate);
+    this->rayrenderer->initRenderData(this->raydistance, this->colorarray, this->playerstate);
 }
 
 void Ray::renderRay(){
 
 
-this->rayrenderer->DrawObject(this->raydistance, this->colorarray, this->playerstate);//
+    this->rayrenderer->DrawObject(this->raydistance, this->colorarray, this->playerstate);//
 
 }
 /* float Ray::closestMapBlockMultiple(float n, float x){ */
@@ -34,7 +34,7 @@ void Ray::updateRayState(std::array<float,3> &playerstate, Map &map){
 void Ray::calculateRayDistances(Map &map){
     float rayoffset= -25;
     float rayangle = playerstate[2]+rayoffset;
-  if (rayangle<0){
+    if (rayangle<0){
         rayangle = 360+rayangle;
     }
     if (rayangle>360){
@@ -42,8 +42,8 @@ void Ray::calculateRayDistances(Map &map){
     }
 
 
-        for (int i=0; i<raynum;i++ ){
-   if (rayangle<0){
+    for (int i=0; i<raynum;i++ ){
+    if (rayangle<0){
         rayangle = 360 + rayangle;
     }
     if (rayangle>359){
@@ -74,54 +74,56 @@ void Ray::calculateRayDistances(Map &map){
     if(rayangle<180){
 
    /*  if(rayangle<90){ */
-    float yoffset = mapoffset-fmod((this->playerstate[1]),mapoffset);
+        float yoffset = mapoffset-fmod((this->playerstate[1]),mapoffset);
         hraydistancey = this->playerstate[1]+yoffset;
         hraydistancex = ((this->playerstate[1]-hraydistancey)*(atan))+this->playerstate[0];
 
-    int increment = 0;
-   while(increment<16){
-  hcheckx = (int)(hraydistancex/mapoffset);
-    hchecky= (int)(hraydistancey/mapoffset);
+        int increment = 0;
+        while(increment<16){
+            hcheckx = (int)(hraydistancex/mapoffset);
+            hchecky= (int)(hraydistancey/mapoffset);
    /*  if(hchecky>0){ */
         /* hcheckx+=1; */
     /* } */
+            if(hcheckx <= 0 || hchecky <= 0 || hcheckx>map.map.size() || hchecky>map.map.size()){
+                break;
+            }
+            if(map.map[hcheckx+((hchecky)*16)]==1 && hcheckx<16 && hchecky<(16) && hcheckx>=0 && hchecky>=0){
+                break;
+
+            }
+
+            hraydistancey = hraydistancey+mapoffset;
+            hraydistancex = hraydistancex-(mapoffset*(atan));
+            increment++;
+        }
+   /*  } */
+   if(rayangle ==0){
+  float yoffset = mapoffset-fmod((this->playerstate[1]),mapoffset);
+        hraydistancey = this->playerstate[1];
+        hraydistancex = this->playerstate[0]+800;
+int increment =16 ;
+   while(increment<16){
+  hcheckx = (int)(hraydistancex/mapoffset);
+    hchecky= (int)(hraydistancey/mapoffset);
+    if(hchecky>0){
+        hcheckx+=1;
+     }
    if(hcheckx <= 0 || hchecky <= 0 || hcheckx>map.map.size() || hchecky>map.map.size()){
         break;
     }
-    if(map.map[hcheckx+((hchecky)*16)]==1 && hcheckx<16 && hchecky<(16) && hcheckx>=0 && hchecky>=0){
+    if(map.map[hcheckx+((hchecky)*16)]==1 && hcheckx<16 && hchecky<(16*8) && hcheckx>=0 && hchecky>=0){
         break;
 
     }
 
-    hraydistancey = hraydistancey+mapoffset;
-    hraydistancex = hraydistancex-(mapoffset*(atan));
+    hraydistancex = hraydistancex+mapoffset;
+
      increment++;
     }
-   /*  } */
- /*   if(rayangle ==0){ */
-/*   float yoffset = mapoffset-fmod((this->playerstate[1]),mapoffset); */
-/*         hraydistancey = this->playerstate[1]; */
-/*         hraydistancex = this->playerstate[0]; */
-/* int increment = 16; */
-/*    while(increment<16){ */
-/*   hcheckx = (int)(hraydistancex/mapoffset); */
-/*     hchecky= (int)(hraydistancey/mapoffset); */
-/*     if(hchecky>0){  */
-/*         hcheckx+=1;  */
-/*      }  */
-/*    if(hcheckx <= 0 || hchecky <= 0 || hcheckx>map.map.size() || hchecky>map.map.size()){ */
-/*         break; */
-/*     } */
-/*     if(map.map[hcheckx+((hchecky)*16)]==1 && hcheckx<16 && hchecky<(16*8) && hcheckx>=0 && hchecky>=0){ */
-/*         break; */
-/*  */
-/*     } */
-/*  */
-/*     hraydistancey = hraydistancey+mapoffset; */
-/*  */
-/*      increment++; */
-/*     } */
-/*  */
+   }
+    }
+
     /* } */
  /*    else{ */
  /*        float yoffset = mapoffset-fmod((this->playerstate[1]),mapoffset); */
@@ -150,32 +152,33 @@ void Ray::calculateRayDistances(Map &map){
  /*  */
     /* } */
 
-    }
+    
     else if(rayangle>=180){
        /*  if(rayangle<270){ */
-    float yoffset =fmod(this->playerstate[1],mapoffset);
-    hraydistancey = this->playerstate[1]-yoffset-0.0001;
-    hraydistancex = this->playerstate[0]+((this->playerstate[1]-hraydistancey)*(atan));
-    int increment = 0;
-   while(increment<16){
- hcheckx = (int)(hraydistancex/mapoffset);
-    hchecky= (int)(hraydistancey/mapoffset);
+        float yoffset =fmod(this->playerstate[1],mapoffset);
+        hraydistancey = this->playerstate[1]-yoffset-0.0001;
+        hraydistancex = this->playerstate[0]+((this->playerstate[1]-hraydistancey)*(atan));
+        int increment = 0;
+        while(increment<16){
+            hcheckx = (int)(hraydistancex/mapoffset);
+            hchecky= (int)(hraydistancey/mapoffset);
     /*  if(hchecky>0){ */
         /* hcheckx+=1; */
     /* } */
- if(hcheckx<=0 || hchecky<=0 || hcheckx>map.map.size() || hchecky>map.map.size()){
-        break;
+            if(hcheckx<=0 || hchecky<=0 || hcheckx>map.map.size() || hchecky>map.map.size()){
+                break;
+            }
+
+            if(map.map[hcheckx+((hchecky)*16)]==1 && hcheckx<16 && hchecky<(16) && hcheckx>=0 && hchecky>=0){
+                break;
+
+            }
+
+            hraydistancey = hraydistancey-mapoffset;
+            hraydistancex = hraydistancex+(mapoffset*(atan));
+            increment++;
+
     }
-
-    if(map.map[hcheckx+((hchecky)*16)]==1 && hcheckx<16 && hchecky<(16) && hcheckx>=0 && hchecky>=0){
-        break;
-
-    }
-
-    hraydistancey = hraydistancey-mapoffset;
-    hraydistancex = hraydistancex+(mapoffset*(atan));
-      increment++;
-
     }
        /*  } */
 
@@ -234,34 +237,34 @@ void Ray::calculateRayDistances(Map &map){
  /*    } */
  /*  */
     /* } */
-    }
+    
     //for checking vertical line
    if(rayangle<=90 || rayangle>270 ){
 /* if(rayangle<90){ */
-    float xoffset = mapoffset-fmod(this->playerstate[0],mapoffset);
-  vraydistancex = this->playerstate[0]+xoffset;
+        float xoffset = mapoffset-fmod(this->playerstate[0],mapoffset);
+        vraydistancex = this->playerstate[0]+xoffset;
 
-  vraydistancey = this->playerstate[1]+(this->playerstate[0]-vraydistancex)*((ntan));
+        vraydistancey = this->playerstate[1]+(this->playerstate[0]-vraydistancex)*((ntan));
 
- int increment = 0;
-    while(increment <16){
-  vcheckx = (int)(vraydistancex/mapoffset);
-    vchecky = (int)(vraydistancey/mapoffset);
+        int increment = 0;
+        while(increment <16){
+            vcheckx = (int)(vraydistancex/mapoffset);
+            vchecky = (int)(vraydistancey/mapoffset);
 /*  if(vchecky>0){ */
         /* vcheckx+=1; */
     /* } */
- if(vcheckx <=0 || vchecky <=0 || vcheckx>map.map.size() || vchecky>map.map.size()){
-        break;
-    }
+        if(vcheckx <=0 || vchecky <=0 || vcheckx>map.map.size() || vchecky>map.map.size()){
+            break;
+        }
 
         if(map.map[vcheckx+((vchecky)*16)]==1 && vcheckx<16 && vchecky<(16) && vcheckx>=0 && vchecky>=0){
-        break;
+            break;
 
-    }
+        }
 
-    vraydistancex = vraydistancex+mapoffset;
-    vraydistancey = vraydistancey-(mapoffset*(ntan));
-         increment++;
+            vraydistancex = vraydistancex+mapoffset;
+            vraydistancey = vraydistancey-(mapoffset*(ntan));
+            increment++;
 
     }
 // }
@@ -324,30 +327,30 @@ void Ray::calculateRayDistances(Map &map){
 }
    else if(rayangle>90 && rayangle<=270){
       /*  if(rayangle<180){ */
-    float xoffset = fmod(this->playerstate[0],mapoffset);
- vraydistancex = this->playerstate[0]-xoffset-0.001;
-    vraydistancey = this->playerstate[1]+((this->playerstate[0]-vraydistancex)*(ntan));
+        float xoffset = fmod(this->playerstate[0],mapoffset);
+        vraydistancex = this->playerstate[0]-xoffset-0.001;
+        vraydistancey = this->playerstate[1]+((this->playerstate[0]-vraydistancex)*(ntan));
 
- int increment = 0;
-    while(increment <16){
- vcheckx = (int)(vraydistancex/mapoffset);
-    vchecky = (int) (vraydistancey/mapoffset);
+        int increment = 0;
+        while(increment <16){
+            vcheckx = (int)(vraydistancex/mapoffset);
+            vchecky = (int) (vraydistancey/mapoffset);
  /* if(vchecky>0){ */
         /* vcheckx+=1; */
     /* } */
-    if(vcheckx <=0 || vchecky <=0 || vcheckx>map.map.size() || vchecky>map.map.size()){
-        break;
-    }
+            if(vcheckx <=0 || vchecky <=0 || vcheckx>map.map.size() || vchecky>map.map.size()){
+                break;
+            }
 
-if(map.map[vcheckx+((vchecky)*16)]==1 && vcheckx<8 && vchecky<(16) && vcheckx>=0 && vchecky>=0){
-        break;
+            if(map.map[vcheckx+((vchecky)*16)]==1 && vcheckx<8 && vchecky<(16) && vcheckx>=0 && vchecky>=0){
+                break;
 
-    }
+            }
 
-    vraydistancex = vraydistancex-mapoffset;
-    vraydistancey = vraydistancey+(mapoffset*(ntan));
+            vraydistancex = vraydistancex-mapoffset;
+            vraydistancey = vraydistancey+(mapoffset*(ntan));
 
-         increment++;
+            increment++;
 
     }
 

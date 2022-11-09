@@ -30,6 +30,7 @@ set(STB_HEADER include/stb_image.h)
 set(TEXTURE_HEADER include/texture.h)
 set(SOUND_HEADER include/sound.h)
 set(SDLAPP_HEADER include/SDLapp.h)
+set(ENEMY_HEADER include/enemy.h)
 
 add_library(texture ${TEXTURE_HEADER} src/texture.cpp)
 add_library(stb_image src/stb_image.cpp ${STB_HEADER})
@@ -47,7 +48,7 @@ add_library(playerrenderer src/playerrenderer.cpp include/playerrenderer.h)
 add_library(rayrenderer src/rayrenderer.cpp ${RAY_RENDERER_HEADER})
 add_library(sound src/sound.cpp ${SOUND_HEADER})
 add_library(SDLapp src/SDLapp.cpp ${SDLAPP_HEADER})
-
+add_library(enemy src/enemy.cpp ${ENEMY_HEADER})
 add_library(X11 SHARED IMPORTED)
 set_property(TARGET X11 PROPERTY IMPORTED_LOCATION "/usr/include/X11/Xlib.h")
 
@@ -75,10 +76,12 @@ target_link_libraries(background shader color)
 target_link_libraries(maprenderer renderer)
 target_link_libraries(ray renderer rayrenderer map entity player glm)
 target_link_libraries(player entity color shader playerrenderer)
+target_link_libraries(enemy renderer ray)
+
 
 target_link_libraries(map entity player color shader maprenderer)
 
-target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color ray renderer rayrenderer maprenderer playerrenderer background)
+target_link_libraries(game OpenGL::GL glfw GL X11 dl pthread glad map player shader color ray renderer rayrenderer maprenderer playerrenderer background enemy)
 
 target_link_libraries(main OpenGL::GL glfw GL X11 dl pthread glad map player game shader color ${Boost_LIBRARIES} ray SDL sound SDLapp)
 

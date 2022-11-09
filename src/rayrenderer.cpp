@@ -116,12 +116,30 @@ void RayRenderer::DrawObject(std::array<float, raynum> &distance, std::array<int
     trans = glm::translate(trans,glm::vec3(0.0f,lineo,0.0));
  trans = glm::scale(trans,glm::vec3(1,lineh,1));
     glm::vec3 colorvec;
+    if(state[2] <90 || state[2]>270){
+ 
+    if(color[i] == 0){
+    colorvec = glm::vec3(this->colors.brown[0]-0.075,this->colors.brown[1]-0.075,this->colors.brown[2]-0.075);
+    }
+    else if(color[i]==1){
+    colorvec = glm::vec3(this->colors.brown[0]-0.125,this->colors.brown[1]-0.125,this->colors.brown[2]-0.125);
+    }}
+    else {
+
     if(color[i] == 1){
     colorvec = glm::vec3(this->colors.brown[0]-0.075,this->colors.brown[1]-0.075,this->colors.brown[2]-0.075);
     }
     else if(color[i]==0){
     colorvec = glm::vec3(this->colors.brown[0]-0.125,this->colors.brown[1]-0.125,this->colors.brown[2]-0.125);
     }
+    }
+/*     if(color[i] == 1){ */
+    /* colorvec = glm::vec3(this->colors.darkblue[0]-0.075,this->colors.darkblue[1]-0.075,this->colors.darkblue[2]-0.075); */
+    /* } */
+    /* else if(color[i]==0){ */
+    /* colorvec = glm::vec3(this->colors.darkblue[0],this->colors.darkblue[1],this->colors.darkblue[2]); */
+    /* } */
+/*  */
 
   this->shader.use();
   this->shader.setMatrix4("projection", this->projection);

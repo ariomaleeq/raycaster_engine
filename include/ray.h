@@ -1,3 +1,5 @@
+#ifndef RAY_H
+#define RAY_H
 #include <math.h>
 #include "rayrenderer.h"
 #include <array>
@@ -17,6 +19,8 @@ class Ray{
         int mapx;            //
         int mapy;
         Shader rayshader;
-        RayRenderer* rayrenderer; 
+        RayRenderer* rayrenderer;
+        friend class Enemy;
 
 };
+#endif

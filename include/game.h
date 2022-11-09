@@ -7,7 +7,7 @@
 #include "player.h"
 #include "ray.h"
 #include "background.h"
-
+#include "enemy.h"
 // Represents the current state of the game
 enum GameState {
     GAME_ACTIVE,
@@ -40,6 +40,7 @@ private:
     Player player;
     Map map;
     Ray ray;
+    Enemy enemy;
 
     Background background;
     };

@@ -11,15 +11,15 @@ Player::Player() {
     this->width = 5;
     this->length = 5;
     Shader playershader("../src/shaders/player.vs", "../src/shaders/player.frag");
-Shader spriteshader("../src/shaders/sprite.vs", "../src/shaders/sprite.frag");
+    Shader spriteshader("../src/shaders/sprite.vs", "../src/shaders/sprite.frag");
 
     this->playerrenderer = PlayerRenderer(playershader, spriteshader);
     Renderer* spriterenderer = &this->playerrenderer;
         spriterenderer->loadTexture("../images/revolver-idle.png", true);
     spriterenderer->initSpriteData();
     spriterenderer->initRenderData();
-std::cout << "Entity: "<< this->name <<"created" << std::endl;
-this->spritestate = IDLE;
+    std::cout << "Entity: "<< this->name <<"created" << std::endl;
+    this->spritestate = IDLE;
 }
 
 void Player::updateEntityState(){

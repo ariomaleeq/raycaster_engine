@@ -30,6 +30,10 @@ class Entity{
         virtual void renderEntity();
         virtual void updateEntityState();
         virtual void updateEntityState(int &state);
+        virtual float getx();
+        virtual float gety();
+        virtual float getrot();
+
         friend class Game;
     protected:
         std::array<float,3> state;//entity state: x,y,theta

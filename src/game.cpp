@@ -17,6 +17,7 @@ void Game::ProcessInput(float dt){
 void Game::Update(float dt){
     this->ray.updateRayState(this->player.state, this->map);
     this->player.updateEntityState();
+    this->enemy.updateEntityState(this->player.state[0], this->player.state[1], this->player.state[2], this->ray);
     //this will be where the collision detection is called to prevent collisions
 
 }
@@ -29,6 +30,7 @@ this->ray.renderRay();
 this->map.renderMap();
 Entity* player = &(this->player);
 player->renderEntity();
+this->enemy.renderEntity();
 
 }
 Entity* Game::playerReference(){

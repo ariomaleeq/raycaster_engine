@@ -132,8 +132,8 @@ void Entity::renderEntity(){
      
     this->playerrenderer.initRenderData(this->state);
     this->playerrenderer.DrawObject();
-    glm::vec2 position = glm::vec2(550.0f, 350.0f);
-    glm::vec2 size = glm::vec2(500.0f, 500.0f);
+    glm::vec2 position = glm::vec2(600.0f, 400.0f);
+    glm::vec2 size = glm::vec2(400.0f, 400.0f);
     glm::vec3 color = glm::vec3(1.0f);
     Renderer* spriterenderer = &this->playerrenderer;
     spriterenderer ->drawSprite(position, size, 0, color);
@@ -151,6 +151,16 @@ void Entity::updateEntityState(int &state){
         this->spritestate = RECOIL;
     }
     // move the player
+}
+
+float Entity::getx(){
+    return this->state[0];
+}
+float Entity::gety(){
+    return this->state[1];
+}
+float Entity::getrot(){
+    return this->state[2];
 }
 
 
