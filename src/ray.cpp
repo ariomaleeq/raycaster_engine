@@ -32,7 +32,7 @@ void Ray::updateRayState(std::array<float,3> &playerstate, Map &map){
     calculateRayDistances(map);
 }
 void Ray::calculateRayDistances(Map &map){
-    float rayoffset= -25;
+    float rayoffset= -22.5;
     float rayangle = playerstate[2]+rayoffset;
     if (rayangle<0){
         rayangle = 360+rayangle;

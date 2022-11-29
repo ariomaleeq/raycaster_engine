@@ -80,6 +80,8 @@ int main()
 
     }
     glfwTerminate();
+    delete gunshot;
+    delete cock;
     return 0;
 }
 

@@ -17,7 +17,12 @@ this->spriteshader = shader2;
 
 Renderer::~Renderer()
 {
-    glDeleteVertexArrays(1, &this->quadVAO);
+    if(this->quadVAO != 0){
+        glDeleteVertexArrays(1, &this->quadVAO);
+    }
+    if(this->spriteVAO != 0){
+        glDeleteVertexArrays(1, &this->spriteVAO);
+    }
 }
 void Renderer::DrawObject(){
 }

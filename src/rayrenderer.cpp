@@ -7,7 +7,7 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
 
 
     unsigned int VBO;
-        float rayoffset = -25;
+        float rayoffset = -22.5;
     float rayangle = state[2]+rayoffset;
     if (rayangle<0){
         rayangle = 360 + rayangle;
@@ -28,7 +28,7 @@ void RayRenderer::initRenderData(std::array<float, raynum> &distance, std::array
         rayarray[i]  = new float[12];
 
     for(int j = 0; j<1; j++){
-        float lineh = (((800*50)/distance[i])*cos(((state[2]-rayangle)/360)*2*M_PI));
+        float lineh = (((800*50)/distance[i])*cos(((rayoffset)/360)*2*M_PI));
 
         if (lineh>800){
             lineh = 800;;

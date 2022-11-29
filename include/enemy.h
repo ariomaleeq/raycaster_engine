@@ -16,6 +16,7 @@ class Enemy: public Entity{
         Renderer* spriterenderer;
         float x;
         float y;
+        float z; //the z position of a sprite
         Ray* ray; 
 
 };
