@@ -51,6 +51,7 @@ int main()
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetCursorPosCallback(window, mouse_callback);
+
     Game raycaster(WINDOW_WIDTH, WINDOW_HEIGHT);
     ColorSettings color;
     glfwSetMouseButtonCallback(window, mouse_button_callback);
@@ -89,9 +90,9 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
     if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && playerstate ==0 )
     {
-         mouse_button_pressed = 1;
-            time_pressed = glfwGetTime();
-gunshot->playSound();
+        mouse_button_pressed = 1;
+        time_pressed = glfwGetTime();
+        gunshot->playSound();
     }
    }
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
@@ -102,7 +103,13 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 }
 void processInput(GLFWwindow* window, Entity* playerentity)
 {
-    
+    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && playerstate ==0 )
+    {
+        mouse_button_pressed = 1;
+        time_pressed = glfwGetTime();
+        gunshot->playSound();
+    }
+
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, true);

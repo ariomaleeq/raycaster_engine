@@ -12,10 +12,6 @@ void Entity::updateEntityState(){
 
 }
 void Entity::moveEntityUp() {
-    // move the entity up naively
-    // this->state[1] = (this->state[1]) - 1;
-    //move entity vectorially
-    // if(this->state[2] <=90){
     float nextstatex;
     float nextstatey;
     int mapx;
@@ -28,18 +24,12 @@ void Entity::moveEntityUp() {
     this->state[0] = (this->state[0]) +1* cos(this->state[2] * M_PI / 180);
     this->state[1] = (this->state[1]) +1* sin(this->state[2] * M_PI/180);
     } 
-    /*   } */
-    /* else if(this->state[2] <360 && this->state[2] > 180){ */
-    /* this->state[0] = (this->state[0]) + 0.001 * cos(this->state[2]); */
-    /* this->state[1] = (this->state[1]) + 0.001 * sin(this->state[2]); */
-    //print entity state
+   
     this->printEntityState();
 
 }
 void Entity::moveEntityDown(){
-    //move entity down naively
-    // this->state[1] = (this->state[1]) + 1;
-    //move entity vectorially
+   //move entity vectorially
     float nextstatex;
     float nextstatey;
     int mapx;
@@ -49,22 +39,14 @@ void Entity::moveEntityDown(){
     mapx = (int)nextstatex/25;
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
-    this->state[0] = (this->state[0]) -1* cos(this->state[2] * M_PI / 180);
-    this->state[1] = (this->state[1]) -1* sin(this->state[2] * M_PI/180);
+        this->state[0] = (this->state[0]) -1* cos(this->state[2] * M_PI / 180);
+        this->state[1] = (this->state[1]) -1* sin(this->state[2] * M_PI/180);
     }
-  /*   } */
-
-    // this->state[0] = (this->state[0]) - 0.001 * cos(this->state[2]);
-    // this->state[1] = (this->state[1]) - 0.001 * sin(this->state[2]);
     this->printEntityState();
 
 }
 void Entity::moveEntityRight(){
-    //move entity right naively
-    // this->state[0] = (this->state[0]) +1;
-    //move entity vectorially
-    // this->state[0] = (this->state[0]) + 0.001 * sin(this->state[2]);
-    // this->state[1] = (this->state[1]) - 0.001 * cos(this->state[2]);
+   //move entity vectorially
     float nextstatex;
     float nextstatey;
     int mapx;
@@ -75,8 +57,8 @@ void Entity::moveEntityRight(){
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
 
-    this->state[1] = (this->state[1]) +0.75* cos(this->state[2] * M_PI / 180);
-    this->state[0] = (this->state[0]) -0.75* sin(this->state[2] * M_PI/180);
+        this->state[1] = (this->state[1]) +0.75* cos(this->state[2] * M_PI / 180);
+        this->state[0] = (this->state[0]) -0.75* sin(this->state[2] * M_PI/180);
     }
     this->printEntityState();
 }
@@ -97,9 +79,9 @@ void Entity::moveEntityLeft(){
     mapy = (int)nextstatey/25;
     if(map.map[mapx+(mapy*16)] ==0) {
 
-    this->state[1] = (this->state[1]) -0.75* cos(this->state[2] * M_PI / 180);
-    this->state[0] = (this->state[0]) +0.75* sin(this->state[2] * M_PI/180);
-    }
+        this->state[1] = (this->state[1]) -0.75* cos(this->state[2] * M_PI / 180);
+        this->state[0] = (this->state[0]) +0.75* sin(this->state[2] * M_PI/180);
+        }
     this->printEntityState();
 }
 
